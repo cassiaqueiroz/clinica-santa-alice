@@ -1,9 +1,8 @@
-// main: ../main.scss
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --accent-color: rgba(1, 176, 110, 0.6);
+  --accent-color: #3C7D7A; /* Verde mais vivo e sofisticado */
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
@@ -17,13 +16,15 @@
     position: relative;
     padding: 0;
     margin: 0 0 15px 0;
+    color: var(--heading-color); /* Verde escuro e vivo para headings */
   }
 
   p {
-    font-size: 15;
+    font-size: 15px; /* Ajustado para um valor válido */
     font-style: italic;
     padding: 0;
     margin: 0 0 30px 0;
+    color: var(--default-color); /* Cor do texto do parágrafo */
   }
 
   .social-links {
@@ -34,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--accent-color);
+      background: var(--accent-color); /* Verde mais vivo e sofisticado */
       color: var(--contrast-color);
       line-height: 1;
       margin: 0 4px;
