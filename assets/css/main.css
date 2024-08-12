@@ -953,6 +953,19 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+/* Estiliza o vídeo */
+video {
+  border: 5px solid var(--accent-color); /* Borda azul */
+  border-radius: 15px;       /* Borda arredondada */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  max-width: 100%;            /* Ajusta o vídeo ao tamanho do contêiner */
+  height: auto;               /* Mantém a proporção do vídeo */
+  display: inline-block;             /* Remove o espaçamento extra em torno do vídeo */
+  margin: 30px auto;          /* Centraliza o vídeo e adiciona espaço */
+  padding: 3px;
+}
+
+
 .about .content h3 {
   font-size: 2rem;
   font-weight: 700;
