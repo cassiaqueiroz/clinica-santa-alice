@@ -1011,14 +1011,14 @@ section,
 --------------------------------------------------------------*/
 /* Estiliza o vídeo */
 video {
-  border: 5px solid var(--accent-color); /* Borda com a cor da variável de cor de destaque */
+  border: 4px double var(--accent-color); /* Borda com a cor da variável de cor de destaque */
   border-radius: 15px;                   /* Borda arredondada */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
   max-width: 100%;                       /* Ajusta o vídeo ao tamanho do contêiner */
   height: auto;                          /* Mantém a proporção do vídeo */
   display: block;                        /* Remove o espaçamento extra em torno do vídeo */
   margin: 30px auto;                     /* Centraliza o vídeo e adiciona espaço superior e inferior */
-  padding: 3px;                          /* Espaçamento interno ao redor do vídeo */
+  padding: 8px;                          /* Espaçamento interno ao redor do vídeo */
   background-color: #000;                /* Adiciona um fundo preto para quando o vídeo não carrega */
 }
 
