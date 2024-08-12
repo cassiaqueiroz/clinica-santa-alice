@@ -77,37 +77,70 @@
     }
   }
 
-  .cta-btn,
-  .cta-btn:focus {
-    color: var(--contrast-color);
-    background: var(--accent-color);
-    font-size: 14px;
-    padding: 8px 25px;
-    margin: 0 0 0 30px;
-    border-radius: 50px;
-    transition: 0.3s;
+.header .cta-btn,
+.header .cta-btn:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 10px 25px;
+  margin: 0 0 0 30px;
+  border-radius: 60px;
+  transition: 0.3s;
+  display: inline-flex; /* Certifica que o botão seja exibido corretamente */
+  align-items: center; /* Alinha o ícone no centro do botão */
+  justify-content: center; /* Alinha o ícone no centro do botão */
+}
 
-    &:hover {
-      color: var(--contrast-color);
-      background: color-mix(in srgb, var(--accent-color), transparent 15%);
-    }
+/* Efeito de pulsar */
+.header .cta-btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.header .cta-btn:hover,
+.header .cta-btn:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
   }
 
-  @media (max-width: 1200px) {
-    .logo {
-      order: 1;
-    }
-
-    .cta-btn {
-      order: 2;
-      margin: 0 15px 0 0;
-      padding: 6px 15px;
-    }
-
-    .navmenu {
-      order: 3;
-    }
+  .header .cta-btn {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 8px 20px;
+    display: flex; /* Garante que o botão se ajuste bem */
   }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+/* Mostrar o botão CTA no mobile */
+@media (max-width: 767px) {
+  .header .cta-btn {
+    display: inline-flex; /* Garante que o botão seja exibido em dispositivos móveis */
+    margin: 15px; /* Ajusta a margem para mobile */
+  }
+}
 
   .scrolled & {
     box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
