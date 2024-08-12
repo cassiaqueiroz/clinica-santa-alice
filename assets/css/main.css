@@ -355,10 +355,8 @@ h6 {
 
   .header .cta-btn {
     order: 3; /* Garante que o botão CTA fique depois do logo */
-    padding: 10px; /* Aumenta o padding para formar um círculo */
     margin: 0;
-    width: 40px;
-    height: 40px;
+   
     border-radius: 50%; /* Torna o botão redondo */
   }
 }
@@ -372,7 +370,7 @@ h6 {
   .header .cta-btn {
     order: 2;
     margin: 0 15px 0 0;
-    padding: 6px 15px;
+    padding: 0.3em 0.6em;
   }
 
   .header .navmenu {
