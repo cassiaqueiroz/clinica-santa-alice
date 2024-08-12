@@ -907,13 +907,26 @@ section,
   margin-bottom: 30px;
 }
 
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .hero .content .why-box .more-btn {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--contrast-color), transparent 80%);
+  background: var(--surface-color);
+  color: var(--accent-color);
   display: inline-block;
-  padding: 6px 30px 8px 30px;
+  padding: 8px 32px 10px 32px;
   border-radius: 50px;
   transition: all ease-in-out 0.4s;
+  animation: pulsar 1.5s infinite;
 }
 
 .hero .content .why-box .more-btn i {
@@ -921,8 +934,8 @@ section,
 }
 
 .hero .content .why-box .more-btn:hover {
-  background: var(--surface-color);
-  color: var(--accent-color);
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--contrast-color), transparent 80%);
 }
 
 .hero .content .icon-box {
