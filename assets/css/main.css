@@ -217,13 +217,15 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+
 .header {
   color: var(--default-color);
+  background-color: var(--background-color);
   transition: all 0.5s;
   z-index: 997;
-  background-color: var(--background-color);
 }
 
+/* Topbar */
 .header .topbar {
   background-color: var(--accent-color);
   height: 40px;
@@ -271,6 +273,7 @@ h6 {
   color: var(--contrast-color);
 }
 
+/* Branding */
 .header .branding {
   min-height: 60px;
   padding: 10px 0;
@@ -292,6 +295,7 @@ h6 {
   color: var(--heading-color);
 }
 
+/* Call to Action Button */
 .header .cta-btn,
 .header .cta-btn:focus {
   color: var(--contrast-color);
@@ -301,9 +305,9 @@ h6 {
   margin: 0 0 0 30px;
   border-radius: 60px;
   transition: 0.3s;
-  display: inline-flex; /* Garante que o botão seja exibido corretamente */
-  align-items: center; /* Alinha o ícone no centro do botão */
-  justify-content: center; /* Alinha o ícone no centro do botão */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Efeito de pulsar */
@@ -333,12 +337,7 @@ h6 {
 }
 
 /* Layout para dispositivos móveis */
-@media (max-width: 991px) {
-  .header .cta-btn {
-    display: inline-flex; /* Garante que o botão seja exibido em dispositivos móveis */
-    margin: 0 10px 0 0; /* Ajusta a margem para ficar próximo ao toggle */
-    padding: 8px 15px;
-  }
+@media (max-width: 990px) {
 
   .header .navmenu {
     display: flex;
@@ -356,9 +355,15 @@ h6 {
 
   .header .cta-btn {
     order: 3; /* Garante que o botão CTA fique depois do logo */
+    padding: 10px; /* Aumenta o padding para formar um círculo */
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Torna o botão redondo */
   }
 }
 
+/* Layout para dispositivos até 1200px */
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -374,6 +379,7 @@ h6 {
     order: 3;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
