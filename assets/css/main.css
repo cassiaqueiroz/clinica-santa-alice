@@ -1067,7 +1067,7 @@ video {
 # Plans Section
 --------------------------------------------------------------*/
 #plans .plans {
-  width: 40%;
+  width: 33%;
   height: auto; 
   display: flex; 
   margin: 0 auto; 
