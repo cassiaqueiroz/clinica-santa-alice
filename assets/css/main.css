@@ -5,29 +5,31 @@
 
 /* Fonts */
 :root {
-  --default-font: "Commissioner", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Commissioner", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "El Messiri", sans-serif;
   --nav-font: "Raleway", sans-serif;
-}
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2C6B6F; /* Verde escuro e um pouco mais vivo para headings, subheadings e títulos em todo o site */
-  --accent-color: #3C7D7A; /* Verde mais vivo e sofisticado para botões, links e outros elementos que precisam se destacar */
+  --heading-color: #2c6b6f; /* Verde escuro e um pouco mais vivo para headings, subheadings e títulos em todo o site */
+  --accent-color: #3c7d7a; /* Verde mais vivo e sofisticado para botões, links e outros elementos que precisam se destacar */
   --surface-color: #f1f7fc; /* Cor clara de superfície para contraste com o verde mais claro */
   --contrast-color: #ffffff; /* Cor de contraste para texto, garantindo legibilidade contra fundos de cor de acento, heading ou default */
-}
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #444444;  /* Cor padrão dos links do menu de navegação */
-  --nav-hover-color: #3C7D7A; /* Verde mais vivo para links do menu quando são sobrepostos ou ativos */
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+
+  --nav-color: #444444; /* Cor padrão dos links do menu de navegação */
+  --nav-hover-color: #3c7d7a; /* Verde mais vivo para links do menu quando são sobrepostos ou ativos */
   --nav-mobile-background-color: #ffffff; /* Usado como cor de fundo para o menu de navegação móvel */
   --nav-dropdown-background-color: #ffffff; /* Usado como cor de fundo para itens de dropdown que aparecem ao passar o mouse sobre itens de navegação principais */
   --nav-dropdown-color: #444444; /* Cor dos links dos itens de dropdown no menu de navegação */
-  --nav-dropdown-hover-color: #3C7D7A; /* Verde mais vivo para links de dropdown quando são sobrepostos */
+  --nav-dropdown-hover-color: #3c7d7a; /* Verde mais vivo para links de dropdown quando são sobrepostos */
+
+  /* Smooth scroll */
+  scroll-behavior: smooth;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the same color scheme. */
@@ -44,14 +46,6 @@
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
-
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
-}
-
-
-
 
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -88,7 +82,10 @@ h6 {
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+  background: radial-gradient(
+    var(--accent-color) 50%,
+    color-mix(in srgb, var(--accent-color), transparent 75%) 52%
+  );
   border-radius: 50%;
   display: block;
   position: relative;
@@ -100,8 +97,8 @@ h6 {
   position: absolute;
   width: 120px;
   height: 120px;
-  animation-delay: 0s;
   animation: pulsate-play-btn 2s;
+  animation-delay: 0s;
   animation-direction: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: steps;
@@ -248,7 +245,8 @@ h6 {
 @media (max-width: 575px) {
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
-    font-size: 9px;
+    font-size: 13px;
+    line-height: 13px;
   }
 }
 
@@ -338,7 +336,6 @@ h6 {
 
 /* Layout para dispositivos móveis */
 @media (max-width: 990px) {
-
   .header .navmenu {
     display: flex;
     align-items: center;
@@ -356,7 +353,7 @@ h6 {
   .header .cta-btn {
     order: 3; /* Garante que o botão CTA fique depois do logo */
     margin: 0;
-   
+
     border-radius: 50%; /* Torna o botão redondo */
   }
 }
@@ -377,7 +374,6 @@ h6 {
     order: 3;
   }
 }
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -435,7 +431,6 @@ h6 {
   .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
-    width: 100%;
     height: 2px;
     bottom: -6px;
     left: 0;
@@ -645,7 +640,7 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --accent-color: #3C7D7A; /* Verde mais sofisticado e elegante */
+  --accent-color: #3c7d7a; /* Verde mais sofisticado e elegante */
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
@@ -697,7 +692,8 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .credits {
@@ -815,11 +811,11 @@ h6 {
   font-weight: 600;
 }
 
-.page-title nav ol li+li {
+.page-title nav ol li + li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title nav ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -839,7 +835,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 60px;
@@ -1016,17 +1011,15 @@ section,
 /* Estiliza o vídeo */
 video {
   border: 4px double var(--accent-color); /* Borda com a cor da variável de cor de destaque */
-  border-radius: 15px;                   /* Borda arredondada */
+  border-radius: 15px; /* Borda arredondada */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  max-width: 100%;                       /* Ajusta o vídeo ao tamanho do contêiner */
-  height: auto;                          /* Mantém a proporção do vídeo */
-  display: block;                        /* Remove o espaçamento extra em torno do vídeo */
-  margin: 30px auto;                     /* Centraliza o vídeo e adiciona espaço superior e inferior */
-  padding: 8px;                          /* Espaçamento interno ao redor do vídeo */
-  background-color: #000;                /* Adiciona um fundo preto para quando o vídeo não carrega */
+  max-width: 100%; /* Ajusta o vídeo ao tamanho do contêiner */
+  height: auto; /* Mantém a proporção do vídeo */
+  display: block; /* Remove o espaçamento extra em torno do vídeo */
+  margin: 30px auto; /* Centraliza o vídeo e adiciona espaço superior e inferior */
+  padding: 8px; /* Espaçamento interno ao redor do vídeo */
+  background-color: #000; /* Adiciona um fundo preto para quando o vídeo não carrega */
 }
-
-
 
 .about .content h3 {
   font-size: 2rem;
@@ -1073,8 +1066,14 @@ video {
 /*--------------------------------------------------------------
 # Plans Section
 --------------------------------------------------------------*/
-.plans {
-  /* Add your styles here */
+#plans .plans {
+  width: 40%;
+  height: auto; 
+  display: flex; 
+  margin: 0 auto; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -1200,7 +1199,7 @@ video {
   padding: 10px 12px;
 }
 
-.appointment .php-email-form button[type=submit] {
+.appointment .php-email-form button[type="submit"] {
   background: var(--accent-color);
   border: 0;
   padding: 10px 35px;
@@ -1209,7 +1208,7 @@ video {
   border-radius: 50px;
 }
 
-.appointment .php-email-form button[type=submit]:hover {
+.appointment .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
@@ -1230,7 +1229,8 @@ video {
   transition: 0.3s;
   color: var(--default-color); /* Cor padrão do texto */
   border-radius: 0;
-  border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-right: 2px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
   font-weight: 600;
   font-size: 15px;
 }
@@ -1271,7 +1271,9 @@ video {
 
   .departments .nav-link.active {
     color: #ffffff; /* Cor do texto da aba ativa em branco em dispositivos menores */
-    background: var(--accent-color); /* Cor de fundo da aba ativa em dispositivos menores */
+    background: var(
+      --accent-color
+    ); /* Cor de fundo da aba ativa em dispositivos menores */
   }
 }
 
@@ -1397,7 +1399,7 @@ video {
   color: var(--contrast-color);
 }
 
-.doctors .team-member .social a+a {
+.doctors .team-member .social a + a {
   margin-left: 8px;
 }
 
@@ -1593,7 +1595,6 @@ video {
 }
 
 @media (max-width: 767px) {
-
   .testimonials .testimonials-carousel,
   .testimonials .testimonials-slider {
     overflow: hidden;
@@ -1624,7 +1625,7 @@ video {
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item+.info-item {
+.contact .info-item + .info-item {
   margin-top: 40px;
 }
 
@@ -1659,31 +1660,35 @@ video {
   height: 100%;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1692,7 +1697,7 @@ video {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
