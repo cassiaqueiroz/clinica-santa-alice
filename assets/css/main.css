@@ -242,6 +242,12 @@ h6 {
   color: var(--contrast-color);
 }
 
+.header .topbar .contact-info i span a:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
 @media (max-width: 575px) {
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
