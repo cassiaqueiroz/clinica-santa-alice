@@ -16,7 +16,7 @@
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2c6b6f; /* Verde escuro e um pouco mais vivo para headings, subheadings e títulos em todo o site */
   --accent-color: #3c7d7a; /* Verde mais vivo e sofisticado para botões, links e outros elementos que precisam se destacar */
-  --surface-color: #F2FCF9; /* Cor clara de superfície para contraste com o verde mais claro */
+  --surface-color: #f2fcf9; /* Cor clara de superfície para contraste com o verde mais claro */
   --contrast-color: #ffffff; /* Cor de contraste para texto, garantindo legibilidade contra fundos de cor de acento, heading ou default */
 
   /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -545,6 +545,10 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
+  }
+  .navmenu ul li {
+    margin-top: 15px;
+    padding: 5px;
   }
 
   .navmenu a,
@@ -1161,7 +1165,6 @@ video {
   background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
   cursor: pointer; /* Muda o cursor para indicar interatividade */
 }
-
 
 /*--------------------------------------------------------------
 # Appointment Section
