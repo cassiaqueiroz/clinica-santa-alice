@@ -1021,7 +1021,6 @@ section,
 /* Estiliza o vídeo */
 video {
   border: 4px double var(--accent-color); /* Borda com a cor da variável de cor de destaque */
-  border-radius: 15px; /* Borda arredondada */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
   max-width: 100%; /* Ajusta o vídeo ao tamanho do contêiner */
   height: auto; /* Mantém a proporção do vídeo */
