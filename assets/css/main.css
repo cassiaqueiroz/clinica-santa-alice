@@ -1024,8 +1024,8 @@ video {
   width: 100%;
   height: auto;
   display: block;
-  border-left: 14px double var(--heading-color);
-  border-right: 14px double var(--heading-color);
+  border-left: 12px double var(--heading-color);
+  border-right: 12px double var(--heading-color);
   border-radius: 8px;
   margin: 45px auto;
   padding: 0px 8px;
