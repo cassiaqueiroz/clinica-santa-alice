@@ -1019,17 +1019,12 @@ section,
 # About Section
 --------------------------------------------------------------*/
 /* Estiliza o vídeo */
-video {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 30px, rgba(0, 0, 0, 0.1) 0px 1px 10px;
-  width: 100%;
+.video-container video {
+  width: 100%; /* Responsividade */
   height: auto;
   display: block;
-  border-left: 10px solid #F2FCF9;
-  border-right: 10px solid #F2FCF9;
-  border-radius: 8px;
-  margin: 45px auto;
-  padding: 0px 8px;
-  background: rgb(0, 0, 0);
+  z-index: 1;
+  border-radius: 8px; /* Alinha com o contêiner */
 }
 
 .about .content h3 {
