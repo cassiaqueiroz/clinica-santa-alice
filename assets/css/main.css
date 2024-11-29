@@ -1024,7 +1024,7 @@ section,
   height: auto;
   display: block;
   z-index: 1;
-  border-radius: 8px; /* Alinha com o contêiner */
+  border-radius: 4px; /* Alinha com o contêiner */
 }
 
 .about .content h3 {
