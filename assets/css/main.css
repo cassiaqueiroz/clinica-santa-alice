@@ -287,15 +287,18 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
+  max-height: 38px;
+  margin-right: 4px;
+  padding: 0;
 }
 
-.header .logo h1 {
+.header .logo span {
   font-size: 30px;
-  margin: 0;
+  font-family: var(--heading-font);
+  margin-top: 6px;
   font-weight: 700;
   color: var(--heading-color);
+  line-height: 1; /* Garante que o texto não fique com espaçamento vertical extra */
 }
 
 /* Call to Action Button */
@@ -364,7 +367,7 @@ h6 {
 }
 
 /* Layout para dispositivos até 1200px */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .header .logo {
     order: 1;
   }
