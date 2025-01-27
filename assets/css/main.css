@@ -762,7 +762,7 @@ h6 {
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
-  border-radius: 4px;
+  border-radius: 50%;
   transition: all 0.4s;
 }
 
