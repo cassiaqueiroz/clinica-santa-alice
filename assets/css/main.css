@@ -2,31 +2,49 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+@import url('https://fonts.cdnfonts.com/css/goudy-old-style');
+
+@font-face {
+  font-family: 'Eras Bold';
+  src: url('../fonts/eras/eras-bold.otf') format('opentype');
+}
 
 /* Fonts */
 :root {
-  --default-font: "Commissioner", system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "El Messiri", sans-serif;
-  --nav-font: "Raleway", sans-serif;
+  --default-font: 'Goudy Old Style', sans-serif;
+  --heading-letter-spacing: 0.05em;
+  /* Define o espaçamento desejado */
+  --heading-font: "Eras Bold", sans-serif;
+  --nav-font: "Goudy Old Style", sans-serif;
 
   /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2c6b6f; /* Verde escuro e um pouco mais vivo para headings, subheadings e títulos em todo o site */
-  --accent-color: #3c7d7a; /* Verde mais vivo e sofisticado para botões, links e outros elementos que precisam se destacar */
-  --surface-color: #f2fcf9; /* Cor clara de superfície para contraste com o verde mais claro */
-  --contrast-color: #ffffff; /* Cor de contraste para texto, garantindo legibilidade contra fundos de cor de acento, heading ou default */
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #444444;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2c6b6f;
+  /* Verde escuro e um pouco mais vivo para headings, subheadings e títulos em todo o site */
+  --accent-color: #3c7d7a;
+  /* Verde mais vivo e sofisticado para botões, links e outros elementos que precisam se destacar */
+  --surface-color: #f2fcf9;
+  /* Cor clara de superfície para contraste com o verde mais claro */
+  --contrast-color: #ffffff;
+  /* Cor de contraste para texto, garantindo legibilidade contra fundos de cor de acento, heading ou default */
 
   /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 
-  --nav-color: #444444; /* Cor padrão dos links do menu de navegação */
-  --nav-hover-color: #3c7d7a; /* Verde mais vivo para links do menu quando são sobrepostos ou ativos */
-  --nav-mobile-background-color: #ffffff; /* Usado como cor de fundo para o menu de navegação móvel */
-  --nav-dropdown-background-color: #ffffff; /* Usado como cor de fundo para itens de dropdown que aparecem ao passar o mouse sobre itens de navegação principais */
-  --nav-dropdown-color: #444444; /* Cor dos links dos itens de dropdown no menu de navegação */
-  --nav-dropdown-hover-color: #3c7d7a; /* Verde mais vivo para links de dropdown quando são sobrepostos */
+  --nav-color: #444444;
+  /* Cor padrão dos links do menu de navegação */
+  --nav-hover-color: #3c7d7a;
+  /* Verde mais vivo para links do menu quando são sobrepostos ou ativos */
+  --nav-mobile-background-color: #ffffff;
+  /* Usado como cor de fundo para o menu de navegação móvel */
+  --nav-dropdown-background-color: #ffffff;
+  /* Usado como cor de fundo para itens de dropdown que aparecem ao passar o mouse sobre itens de navegação principais */
+  --nav-dropdown-color: #444444;
+  /* Cor dos links dos itens de dropdown no menu de navegação */
+  --nav-dropdown-hover-color: #3c7d7a;
+  /* Verde mais vivo para links de dropdown quando são sobrepostos */
 
   /* Smooth scroll */
   scroll-behavior: smooth;
@@ -75,6 +93,7 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+  letter-spacing: var(--heading-letter-spacing);
 }
 
 /* Pulsating Play Button
@@ -82,10 +101,8 @@ h6 {
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(
-    var(--accent-color) 50%,
-    color-mix(in srgb, var(--accent-color), transparent 75%) 52%
-  );
+  background: radial-gradient(var(--accent-color) 50%,
+      color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
   border-radius: 50%;
   display: block;
   position: relative;
@@ -168,7 +185,7 @@ h6 {
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .php-email-form .sent-message {
@@ -178,7 +195,7 @@ h6 {
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .php-email-form .loading {
@@ -227,7 +244,7 @@ h6 {
   background-color: var(--accent-color);
   height: 40px;
   padding: 0;
-  font-size: 14px;
+  font-size: 17px;
   transition: all 0.5s;
 }
 
@@ -244,10 +261,11 @@ h6 {
 
 .header .topbar .contact-info i span a:hover {
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media (max-width: 575px) {
+
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
     font-size: 13px;
@@ -292,13 +310,15 @@ h6 {
   padding: 0;
 }
 
-.header .logo span {
-  font-size: 30px;
+.header .logo h1 {
+  font-size: 1.7rem;
   font-family: var(--heading-font);
   margin-top: 6px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--heading-color);
-  line-height: 1; /* Garante que o texto não fique com espaçamento vertical extra */
+  line-height: 1;
+  letter-spacing: var(--heading-letter-spacing);
+  /* Garante que o texto não fique com espaçamento vertical extra */
 }
 
 /* Call to Action Button */
@@ -326,10 +346,12 @@ h6 {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
   }
+
   50% {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
   100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -347,22 +369,27 @@ h6 {
   .header .navmenu {
     display: flex;
     align-items: center;
-    flex-wrap: nowrap; /* Impede que o menu de navegação quebre para uma nova linha */
+    flex-wrap: nowrap;
+    /* Impede que o menu de navegação quebre para uma nova linha */
   }
 
   .header .mobile-nav-toggle {
-    order: 1; /* Garante que o ícone do toggle fique no início */
+    order: 1;
+    /* Garante que o ícone do toggle fique no início */
   }
 
   .header .logo {
-    order: 2; /* Garante que o logo fique depois do toggle */
+    order: 2;
+    /* Garante que o logo fique depois do toggle */
   }
 
   .header .cta-btn {
-    order: 3; /* Garante que o botão CTA fique depois do logo */
+    order: 3;
+    /* Garante que o botão CTA fique depois do logo */
     margin: 0;
 
-    border-radius: 50%; /* Torna o botão redondo */
+    border-radius: 50%;
+    /* Torna o botão redondo */
   }
 }
 
@@ -404,19 +431,19 @@ h6 {
     position: relative;
   }
 
-  .navmenu > ul > li {
+  .navmenu>ul>li {
     white-space: nowrap;
     padding: 15px 14px;
   }
 
-  .navmenu > ul > li:last-child {
+  .navmenu>ul>li:last-child {
     padding-right: 0;
   }
 
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 15px;
+    font-size: 18px;
     padding: 0 2px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -436,7 +463,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu > ul > li > a:before {
+  .navmenu>ul>li>a:before {
     content: "";
     position: absolute;
     height: 2px;
@@ -449,13 +476,13 @@ h6 {
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover > a:before,
+  .navmenu li:hover>a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
 
-  .navmenu li:hover > a,
+  .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -472,7 +499,7 @@ h6 {
     top: 130%;
     opacity: 0;
     transition: 0.3s;
-    border-radius: 4px;
+    border-radius: 10px;
     z-index: 99;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
@@ -483,7 +510,7 @@ h6 {
 
   .navmenu .dropdown ul a {
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 18px;
     text-transform: none;
     color: var(--nav-dropdown-color);
   }
@@ -494,11 +521,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover > a {
+  .navmenu .dropdown ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover > ul {
+  .navmenu .dropdown:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -510,7 +537,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover > ul {
+  .navmenu .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -541,7 +568,7 @@ h6 {
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
-    border-radius: 6px;
+    border-radius: 10px;
     background-color: var(--nav-mobile-background-color);
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: none;
@@ -549,6 +576,7 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
   }
+
   .navmenu ul li {
     margin-top: 15px;
     padding: 5px;
@@ -616,7 +644,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown > .dropdown-active {
+  .navmenu .dropdown>.dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -643,7 +671,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu > ul {
+  .mobile-nav-active .navmenu>ul {
     display: block;
   }
 }
@@ -652,25 +680,34 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --accent-color: #3c7d7a; /* Verde mais sofisticado e elegante */
+  --accent-color: #3c7d7a;
+  /* Verde mais sofisticado e elegante */
   color: var(--default-color);
   background-color: var(--background-color);
-  font-size: 14px;
+  font-size: 17px;
   text-align: center;
   padding: 30px 0;
   position: relative;
 }
 
+.footer img {
+  width: 100%; /* Ajusta a largura da imagem para 100% do elemento pai */
+  max-width: 300px; /* Define uma largura máxima para a imagem (ajuste conforme necessário) */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove qualquer espaçamento indesejado abaixo da imagem */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
 .footer h3 {
   font-size: 23px;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
   padding: 0;
   margin: 0 0 15px 0;
 }
 
 .footer p {
-  font-size: 14px;
+  font-size: 17px;
   font-style: italic;
   padding: 0;
   margin: 0 0 20px 0;
@@ -703,14 +740,13 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  font-size: 11px;
-  border-top: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 90%);
+  font-size: 14px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .credits,
 .footer .credits span {
-  font-size: 11px;
+  font-size: 14px;
   padding-top: 5px;
 }
 
@@ -807,7 +843,7 @@ h6 {
 
 .page-title .heading h1 {
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .page-title nav {
@@ -820,15 +856,15 @@ h6 {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 600;
 }
 
-.page-title nav ol li + li {
+.page-title nav ol li+li {
   padding-left: 10px;
 }
 
-.page-title nav ol li + li::before {
+.page-title nav ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -848,6 +884,7 @@ section,
 }
 
 @media (max-width: 1199px) {
+
   section,
   .section {
     scroll-margin-top: 60px;
@@ -864,7 +901,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 1.7rem;
   font-weight: 500;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -902,121 +939,117 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section Ajustado
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: calc(100vh - 112px);
-  padding: 80px 0;
+  height: 60vh;
+  /* Ajuste a altura conforme necessário */
   display: flex;
+  flex-direction: column;
+  /* Organiza os elementos de forma vertical */
   align-items: center;
   justify-content: center;
+  /* Centraliza os itens no centro */
   position: relative;
   overflow: hidden;
+  text-align: center;
+  /* Mantém o alinhamento do conteúdo */
+  background-image: url('../img/bg.svg');
+  /* Imagem de fundo */
+  background-size: contain;
+  background-position: top center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Impede que a imagem se repita */
 }
 
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
+/* why */
+.why-box {
+  background: rgba(255, 255, 255, 0.9);
+  /* Mais opacidade para melhorar a legibilidade */
+  color: var(--default-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  /* Ajuste o tamanho máximo */
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  filter:opacity(50%);
+  text-align: center;
 }
 
-.hero .container {
-  z-index: 3;
+.why-box h3 {
+  font-size: 2rem;
+  /* Tamanho de fonte maior para desktops */
+  margin-bottom: 10px;
 }
 
-.hero .welcome h2 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
+.why-box p {
+  font-size: 1.2rem;
+  /* Tamanho de fonte ajustado */
+  margin-bottom: 15px;
 }
 
-.hero .welcome p {
-  font-size: 24px;
-  margin: 0;
+/* Responsividade */
+@media (max-width: 700px) {
+
+  .hero {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .why-box h3 {
+    font-size: 1.8rem;
+    /* Reduz o tamanho da fonte em telas pequenas */
+  }
+
+  .why-box p {
+    font-size: 1rem;
+    /* Reduz o tamanho da fonte do parágrafo */
+  }
+
+  .more-btn {
+    font-size: 14px;
+    /* Ajusta o tamanho do botão */
+    padding: 8px 16px;
+    /* Ajusta o padding do botão */
+  }
 }
 
-.hero .content {
-  margin-top: 40px;
-}
-
-.hero .content .why-box {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  padding: 30px;
-  border-radius: 4px;
-}
-
-.hero .content .why-box h3 {
-  color: var(--contrast-color);
-  font-weight: 700;
-  font-size: 34px;
-  margin-bottom: 30px;
-}
-
-.hero .content .why-box p {
-  margin-bottom: 30px;
-}
-
+/* Animação pulsante para o botão */
 @keyframes pulsar {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
-.hero .content .why-box .more-btn {
-  background: var(--surface-color);
-  color: var(--accent-color);
+.more-btn {
   display: inline-block;
-  padding: 8px 32px 10px 32px;
-  border-radius: 50px;
-  transition: all ease-in-out 0.4s;
-  animation: pulsar 1.5s infinite;
-}
-
-.hero .content .why-box .more-btn i {
-  font-size: 14px;
-}
-
-.hero .content .why-box .more-btn:hover {
+  background: var(--accent-color);
   color: var(--contrast-color);
-  background: color-mix(in srgb, var(--contrast-color), transparent 80%);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: var(--heading-font);
+  text-decoration: none;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: pulsar 1.5s infinite;
+  /* Aplica a animação pulsante */
 }
 
-.hero .content .icon-box {
-  text-align: center;
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--surface-color), transparent 20%);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px;
-  width: 100%;
-}
-
-.hero .content .icon-box i {
-  font-size: 40px;
+.more-btn:hover {
+  background: #f2fcf9;
   color: var(--accent-color);
-}
-
-.hero .content .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 10px 0 20px 0;
-}
-
-.hero .content .icon-box p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
@@ -1024,16 +1057,18 @@ section,
 --------------------------------------------------------------*/
 /* Estiliza o vídeo */
 .video-container video {
-  width: 100%; /* Responsividade */
+  width: 100%;
+  /* Responsividade */
   height: auto;
   display: block;
   z-index: 1;
-  border-radius: 4px; /* Alinha com o contêiner */
+  border-radius: 10px;
+  /* Alinha com o contêiner */
 }
 
 .about .content h3 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 .about .content ul {
@@ -1056,11 +1091,11 @@ section,
 
 .about .content ul h5 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .about .content ul p {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .about .content p:last-child {
@@ -1096,6 +1131,8 @@ section,
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .services .service-item .icon {
@@ -1103,7 +1140,7 @@ section,
   width: 64px;
   height: 64px;
   background: var(--accent-color);
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1126,44 +1163,53 @@ section,
   height: 100%;
   width: 100%;
   background: color-mix(in srgb, var(--accent-color), transparent 80%);
-  border-radius: 5px;
+  border-radius: 10px;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
 
 .services .service-item h3 {
-  font-weight: 700;
+  font-weight: 500;
   margin: 10px 0 15px 0;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 0;
 }
 
 .services .button-container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  margin: 15px 0; /* Adiciona espaço acima e abaixo do botão */
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  margin: 15px 0;
+  /* Adiciona espaço acima e abaixo do botão */
 }
 
 .services .more-btn-s {
   background-color: var(--accent-color);
   color: var(--contrast-color);
   margin-top: 15px;
-  border: none; /* Remove a borda padrão */
-  padding: 10px 20px; /* Adiciona padding ao botão */
-  border-radius: 40px; /* Bordas arredondadas */
-  font-size: 15px; /* Tamanho da fonte */
-  cursor: pointer; /* Cursor muda para pointer */
-  transition: background-color 0.3s; /* Transição suave */
+  border: none;
+  /* Remove a borda padrão */
+  padding: 10px 20px;
+  /* Adiciona padding ao botão */
+  border-radius: 40px;
+  /* Bordas arredondadas */
+  font-size: 18px;
+  /* Tamanho da fonte */
+  cursor: pointer;
+  /* Cursor muda para pointer */
+  transition: background-color 0.3s;
+  /* Transição suave */
 }
 
 .more-btn-s:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
-  cursor: pointer; /* Muda o cursor para indicar interatividade */
+  cursor: pointer;
+  /* Muda o cursor para indicar interatividade */
 }
 
 /*--------------------------------------------------------------
@@ -1185,7 +1231,7 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   border-radius: 0;
   box-shadow: none;
-  font-size: 14px;
+  font-size: 17px;
   padding: 10px !important;
 }
 
@@ -1238,22 +1284,26 @@ section,
   border: 0;
   padding: 12px 15px 12px;
   transition: 0.3s;
-  color: var(--default-color); /* Cor padrão do texto */
+  color: var(--default-color);
+  /* Cor padrão do texto */
   border-radius: 0;
-  border-right: 2px solid
-    color-mix(in srgb, var(--default-color), transparent 90%);
+  border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .departments .nav-link:hover {
-  color: var(--accent-color); /* Cor do texto ao passar o mouse */
+  color: var(--accent-color);
+  /* Cor do texto ao passar o mouse */
 }
 
 .departments .nav-link.active {
-  color: #ffffff; /* Cor do texto da aba ativa em branco */
-  border-color: var(--accent-color); /* Cor da borda da aba ativa */
-  background-color: var(--accent-color); /* Cor de fundo da aba ativa */
+  color: #ffffff;
+  /* Cor do texto da aba ativa em branco */
+  border-color: var(--accent-color);
+  /* Cor da borda da aba ativa */
+  background-color: var(--accent-color);
+  /* Cor de fundo da aba ativa */
 }
 
 .departments .tab-pane.active {
@@ -1281,10 +1331,10 @@ section,
   }
 
   .departments .nav-link.active {
-    color: #ffffff; /* Cor do texto da aba ativa em branco em dispositivos menores */
-    background: var(
-      --accent-color
-    ); /* Cor de fundo da aba ativa em dispositivos menores */
+    color: #ffffff;
+    /* Cor do texto da aba ativa em branco em dispositivos menores */
+    background: var(--accent-color);
+    /* Cor de fundo da aba ativa em dispositivos menores */
   }
 }
 
@@ -1295,7 +1345,7 @@ section,
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.5s;
   padding: 30px;
   height: 100%;
@@ -1336,14 +1386,14 @@ section,
 }
 
 .doctors .team-member h4 {
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 5px;
   font-size: 20px;
 }
 
 .doctors .team-member span {
   display: block;
-  font-size: 15px;
+  font-size: 18px;
   padding-bottom: 10px;
   position: relative;
   font-weight: 500;
@@ -1368,7 +1418,7 @@ section,
 
 .doctors .team-member p {
   margin: 10px 0 0 0;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .doctors .team-member .social {
@@ -1398,7 +1448,7 @@ section,
 
 .doctors .team-member .social a i {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 16px;
+  font-size: 19px;
   margin: 0 2px;
 }
 
@@ -1410,7 +1460,7 @@ section,
   color: var(--contrast-color);
 }
 
-.doctors .team-member .social a + a {
+.doctors .team-member .social a+a {
   margin-left: 8px;
 }
 
@@ -1423,7 +1473,7 @@ section,
 }
 
 .faq .content p {
-  font-size: 15px;
+  font-size: 18px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
@@ -1477,7 +1527,7 @@ section,
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
@@ -1507,7 +1557,7 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .info h3 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 32px;
 }
 
@@ -1544,7 +1594,7 @@ section,
 
 .testimonials .testimonial-item h4 {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
+  font-size: 17px;
   margin: 0;
 }
 
@@ -1606,6 +1656,7 @@ section,
 }
 
 @media (max-width: 767px) {
+
   .testimonials .testimonials-carousel,
   .testimonials .testimonials-slider {
     overflow: hidden;
@@ -1637,7 +1688,7 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact .info-item + .info-item {
+.contact .info-item+.info-item {
   margin-top: 40px;
 }
 
@@ -1655,17 +1706,22 @@ section,
   margin-right: 15px;
 }
 
+.contact .container {
+  justify-content: center;
+  align-items: center;
+}
+
 .contact .info-item h3 {
   padding: 0;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 17px;
 }
 
 .contact .php-email-form {
@@ -1675,16 +1731,14 @@ section,
 .contact .php-email-form input[type="text"],
 .contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
-  font-size: 14px;
+  font-size: 17px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
   color: var(--default-color);
-  background-color: color-mix(
-    in srgb,
-    var(--background-color),
-    transparent 50%
-  );
+  background-color: color-mix(in srgb,
+      var(--background-color),
+      transparent 50%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
@@ -1733,10 +1787,12 @@ section,
 }
 
 .compact-value-list li::before {
-  content: "✓"; /* Código do ícone de check do Font Awesome */
+  content: "✓";
+  /* Código do ícone de check do Font Awesome */
   color: #333;
   font-size: 12px;
   margin-right: 8px;
   position: relative;
-  bottom: -1px; /* Alinha o marcador com o texto */
+  bottom: -1px;
+  /* Alinha o marcador com o texto */
 }
