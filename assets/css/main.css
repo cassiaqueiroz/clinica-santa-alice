@@ -1038,6 +1038,8 @@ section,
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 16px;
+  letter-spacing: var(--heading-letter-spacing);
+  font-weight: 500;
   font-family: var(--heading-font);
   text-decoration: none;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
