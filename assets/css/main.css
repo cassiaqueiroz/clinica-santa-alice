@@ -53,7 +53,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the same color scheme. */
 
 .light-background {
-  --background-color: #f2fcf9;
+  --background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   --surface-color: #ffffff;
 }
 
@@ -244,7 +244,7 @@ h6 {
   background-color: var(--accent-color);
   height: 40px;
   padding: 0;
-  font-size: 17px;
+  font-size: 18px;
   transition: all 0.5s;
 }
 
@@ -268,8 +268,8 @@ h6 {
 
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 15px;
+    line-height: 15px;
   }
 }
 
@@ -326,7 +326,7 @@ h6 {
 .header .cta-btn:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 17px;
+  font-size: 18px;
   padding: 5px 10px;
   margin: 0 0 0 30px;
   border-radius: 60px;
@@ -587,7 +587,7 @@ h6 {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -684,10 +684,11 @@ h6 {
   /* Verde mais sofisticado e elegante */
   color: var(--default-color);
   background-color: var(--background-color);
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
   padding: 30px 0;
   position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .footer img {
@@ -712,8 +713,7 @@ h6 {
 }
 
 .footer p {
-  font-size: 17px;
-  font-style: italic;
+  font-size: 18px;
   padding: 0;
   margin: 0 0 20px 0;
 }
@@ -745,13 +745,13 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  font-size: 14px;
+  font-size: 15px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .credits,
 .footer .credits span {
-  font-size: 14px;
+  font-size: 15px;
   padding-top: 5px;
 }
 
@@ -966,7 +966,7 @@ section,
   height: 100%;
   background: radial-gradient(circle at 90% 10%,
       color-mix(in srgb, var(--accent-color), transparent 92%),
-      transparent 40%);
+      transparent 90%);
   pointer-events: none;
 }
 
@@ -1008,7 +1008,7 @@ section,
   color: var(--contrast-color);
   padding: 10px 20px;
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: var(--heading-letter-spacing);
   font-weight: 500;
   text-decoration: none;
@@ -1118,18 +1118,24 @@ section,
   align-items: center;
 }
 
+#plans {
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  /* Garante que a sombra não será cortada */
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
-  background-color: var(--surface-color);
+  background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   height: 100%;
   border-radius: 10px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .services .service-item .icon {
@@ -1173,7 +1179,7 @@ section,
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 17px;
+  font-size: 18px;
   margin-bottom: 0;
 }
 
@@ -1228,7 +1234,7 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   border-radius: 0;
   box-shadow: none;
-  font-size: 17px;
+  font-size: 18px;
   padding: 10px !important;
 }
 
@@ -1415,7 +1421,7 @@ section,
 
 .doctors .team-member p {
   margin: 10px 0 0 0;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .doctors .team-member .social {
@@ -1591,7 +1597,7 @@ section,
 
 .testimonials .testimonial-item h4 {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 17px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -1718,7 +1724,7 @@ section,
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .contact .php-email-form {
@@ -1728,7 +1734,7 @@ section,
 .contact .php-email-form input[type="text"],
 .contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
-  font-size: 17px;
+  font-size: 18px;
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
