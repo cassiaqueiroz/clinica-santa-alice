@@ -688,7 +688,7 @@ h6 {
   text-align: center;
   padding: 30px 0;
   position: relative;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
 }
 
 .footer img {
@@ -1116,6 +1116,10 @@ section,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#plans .plans img {
+  width: 33%;
 }
 
 #plans {
