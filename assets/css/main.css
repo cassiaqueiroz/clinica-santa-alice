@@ -1193,25 +1193,51 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Plans Section
+# Plans Section - Letreiro Infinito
 --------------------------------------------------------------*/
-#plans .plans {
-  width: 33%;
-  height: auto;
-  display: flex;
-  margin: 0 auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#plans .plans img {
-  width: 33%;
-}
-
 #plans {
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.15);
-  overflow: visible;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
+  white-space: nowrap; /* Impede que as imagens quebrem para a próxima linha */
+  position: relative;
+  background-color: var(--surface-color); /* Cor de fundo para a seção */
+  padding: 40px 0; /* Espaçamento vertical */
+}
+
+#plans .plans-container {
+  display: flex; /* Faz com que as imagens fiquem em linha */
+}
+
+#plans .plans-inner {
+  display: inline-block; /* Faz com que as imagens fiquem em linha */
+  animation: scrollPlans 15s alternate infinite; /* Animação de rolagem */
+}
+
+#plans .plans-inner img {
+  width: 150px; /* Tamanho das imagens */
+  height: auto;
+  margin: 0 20px; /* Espaçamento entre as imagens */
+}
+
+/* Animação de rolagem */
+@keyframes scrollPlans {
+  from {
+    transform: translateX(0); /* Começa na posição original */
+  }
+  to {
+    transform: translateX(-50%); /* Move para a esquerda até a metade do contêiner */
+  }
+}
+
+@media (max-width: 768px) {
+  #plans .plans-inner img {
+    width: 100px; /* Tamanho menor para mobile */
+    margin: 0 10px; /* Espaçamento menor para mobile */
+  }
+
+  #plans .plans-inner {
+    animation-duration: 10s; /* Diminui a duração da animação em dispositivos móveis */
+    /* animation-timing-function: linear; */
+  }
 }
 
 /*--------------------------------------------------------------
