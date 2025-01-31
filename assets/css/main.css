@@ -1230,7 +1230,6 @@ section,
 
 @media (max-width: 768px) {
   #plans .plans-inner img {
-    width: 100px; /* Tamanho menor para mobile */
     margin: 0 10px; /* Espaçamento menor para mobile */
   }
 
