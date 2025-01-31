@@ -763,9 +763,11 @@ h6 {
 }
 
 .footer img {
-  max-width: 250px; /* Imagem menor */
+  max-width: 250px;
+  /* Imagem menor */
   height: auto;
-  margin-bottom: 15px; /* Espaçamento reduzido */
+  margin-bottom: 15px;
+  /* Espaçamento reduzido */
 }
 
 .footer h3 {
@@ -1039,7 +1041,7 @@ section,
       color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
       color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
       transparent 50%);
-      padding: auto 10px;
+  padding: auto 10px;
 }
 
 .hero-2::before {
@@ -1148,7 +1150,7 @@ section,
 }
 
 .about {
-  padding: 0 10px;
+  padding: auto 10px;
 
 }
 
@@ -1203,45 +1205,51 @@ section,
 --------------------------------------------------------------*/
 #plans {
   overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
-  white-space: nowrap; /* Impede que as imagens quebrem para a próxima linha */
   position: relative;
-  background-color: var(--surface-color); /* Cor de fundo para a seção */
-  padding: 40px 0; /* Espaçamento vertical */
+  background-color: var(--surface-color); /* Cor de fundo */
+  padding: auto; /* Espaçamento vertical */
 }
 
-#plans .plans-container {
-  display: flex; /* Faz com que as imagens fiquem em linha */
+.plans-container {
+  display: flex; /* Flexbox para alinhar as imagens horizontalmente */
+  white-space: nowrap; /* Impede que o conteúdo quebre linha */
 }
 
-#plans .plans-inner {
-  display: inline-block; /* Faz com que as imagens fiquem em linha */
-  animation: scrollPlans 15s alternate infinite; /* Animação de rolagem */
+.plans-inner {
+  display: flex; /* Flexbox para alinhar as imagens */
+  animation: scrollPlans 15s linear infinite; /* Animação de rolagem */
 }
 
-#plans .plans-inner img {
-  width: 150px; /* Tamanho das imagens */
-  height: auto;
-  margin: 0 20px; /* Espaçamento entre as imagens */
+/* DUPLICA o conteúdo para criar um efeito de loop contínuo */
+.plans-inner::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  background-image: inherit; /* Mantém o fundo das imagens */
 }
 
-/* Animação de rolagem */
 @keyframes scrollPlans {
   from {
-    transform: translateX(0); /* Começa na posição original */
+      transform: translateX(0%); /* Começa na posição original */
   }
   to {
-    transform: translateX(-50%); /* Move para a esquerda até a metade do contêiner */
+      transform: translateX(-100%); /* Move para a esquerda até a metade do contêiner */
   }
+}
+
+.plans-inner img {
+  width: 150px; /* Tamanho das imagens */
+  height: auto;
+  margin-right: 24px; /* Espaçamento entre as imagens */
 }
 
 @media (max-width: 768px) {
-  #plans .plans-inner img {
-    margin: 0 10px; /* Espaçamento menor para mobile */
+  .plans-inner img {
+      margin-right: 10px; /* Espaçamento menor para mobile */
   }
 
-  #plans .plans-inner {
-    animation-duration: 10s; /* Diminui a duração da animação em dispositivos móveis */
-    /* animation-timing-function: linear; */
+  .plans-inner {
+      animation-duration: 10s; /* Diminui a duração da animação em dispositivos móveis */
   }
 }
 
@@ -1249,7 +1257,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  padding: 0 10px;
+  padding: auto 10px;
 }
 
 .services .service-item {
@@ -1340,7 +1348,7 @@ section,
 --------------------------------------------------------------*/
 .appointment .php-email-form {
   width: 100%;
-  padding: 0 10px;
+  padding: auto 10px;
 }
 
 .appointment .php-email-form .form-group {
@@ -1400,6 +1408,7 @@ section,
 .gallery {
   padding: auto 10px;
 }
+
 .gallery .gallery-item {
   overflow: hidden;
   border-right: 10px solid var(--background-color);
