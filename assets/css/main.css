@@ -1356,8 +1356,8 @@ section,
 .appointment .php-email-form select {
   color: var(--default-color);
   background-color: transparent;
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  border-radius: 0;
+  border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+  border-radius: 5px;
   box-shadow: none;
   font-size: var(--font-size-md);
   /* 18px */
@@ -1477,12 +1477,11 @@ section,
   /* 18px */
   padding: 10px 15px;
   box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
+  border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+  border-radius: 5px;  color: var(--default-color);
   background-color: color-mix(in srgb,
       var(--background-color),
       transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .contact .php-email-form input[type="text"]:focus,
