@@ -1039,6 +1039,7 @@ section,
       color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
       color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
       transparent 50%);
+      padding: auto 10px;
 }
 
 .hero-2::before {
@@ -1146,6 +1147,11 @@ section,
   border-radius: 10px;
 }
 
+.about {
+  padding: 0 10px;
+
+}
+
 .about .content h3 {
   font-size: var(--font-size-xl);
   /* 24px */
@@ -1242,6 +1248,10 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+.services {
+  padding: 0 10px;
+}
+
 .services .service-item {
   background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   text-align: center;
@@ -1330,6 +1340,7 @@ section,
 --------------------------------------------------------------*/
 .appointment .php-email-form {
   width: 100%;
+  padding: 0 10px;
 }
 
 .appointment .php-email-form .form-group {
@@ -1386,10 +1397,13 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
+.gallery {
+  padding: auto 10px;
+}
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 4px solid var(--background-color);
-  border-bottom: 4px solid var(--background-color);
+  border-right: 10px solid var(--background-color);
+  border-bottom: 10px solid var(--background-color);
 }
 
 .gallery .gallery-item img {
@@ -1404,6 +1418,10 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact {
+  padding: auto 10px;
+}
+
 .contact .info-item+.info-item {
   margin-top: 40px;
 }
