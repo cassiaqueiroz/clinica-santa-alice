@@ -172,17 +172,3 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const plansInner = document.querySelector('#plans .plans-inner');
-  
-  // Pausa a animação ao passar o mouse
-  plansInner.addEventListener("mouseenter", () => {
-      plansInner.style.animationPlayState = 'paused';
-  });
-
-  // Retoma a animação ao remover o mouse
-  plansInner.addEventListener("mouseleave", () => {
-      plansInner.style.animationPlayState = 'running';
-  });
-});
