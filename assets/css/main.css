@@ -1018,7 +1018,8 @@ section,
   display: block;
   width: 60px;
   height: 3px;
-  background: #5555;
+  background: var(--accent-color);
+  opacity: 0.5;
   left: 0;
   right: 0;
   bottom: 0;
