@@ -1212,20 +1212,11 @@ section,
 
 .plans-container {
   display: flex; /* Flexbox para alinhar as imagens horizontalmente */
-  white-space: nowrap; /* Impede que o conteúdo quebre linha */
 }
 
 .plans-inner {
   display: flex; /* Flexbox para alinhar as imagens */
-  animation: scrollPlans 15s linear infinite; /* Animação de rolagem */
-}
-
-/* DUPLICA o conteúdo para criar um efeito de loop contínuo */
-.plans-inner::after {
-  content: "";
-  display: flex;
-  width: 100%;
-  background-image: inherit; /* Mantém o fundo das imagens */
+  animation: scrollPlans 15s linear infinite normal; /* Animação de rolagem */
 }
 
 @keyframes scrollPlans {
