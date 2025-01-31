@@ -1207,6 +1207,8 @@ section,
   overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
   padding: auto; /* Espaçamento vertical */
+  box-shadow: 8px 0 10px rgba(44, 107, 111, 0.2);
+
 }
 
 .plans-container {
