@@ -1312,7 +1312,7 @@ section,
 
 .services .service-item p {
   line-height: 24px;
-  text-align: justify;
+  text-align: center;
   padding: 10px;
   font-size: var(--font-size-md);
   margin-bottom: 0;
