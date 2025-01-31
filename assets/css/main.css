@@ -13,45 +13,39 @@
 :root {
   --default-font: 'Goudy Old Style', sans-serif;
   --heading-letter-spacing: 0.05em;
-  /* Define o espaçamento desejado */
   --heading-font: "Eras Bold", sans-serif;
   --nav-font: "Goudy Old Style", sans-serif;
 
-  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  /* Global Colors */
   --background-color: #ffffff;
-  /* Background color for the entire website, including individual sections */
   --default-color: #444444;
-  /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2c6b6f;
-  /* Verde escuro e um pouco mais vivo para headings, subheadings e títulos em todo o site */
   --accent-color: #3c7d7a;
-  /* Verde mais vivo e sofisticado para botões, links e outros elementos que precisam se destacar */
   --surface-color: #f2fcf9;
-  /* Cor clara de superfície para contraste com o verde mais claro */
   --contrast-color: #ffffff;
-  /* Cor de contraste para texto, garantindo legibilidade contra fundos de cor de acento, heading ou default */
 
-  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-
+  /* Nav Menu Colors */
   --nav-color: #444444;
-  /* Cor padrão dos links do menu de navegação */
   --nav-hover-color: #3c7d7a;
-  /* Verde mais vivo para links do menu quando são sobrepostos ou ativos */
   --nav-mobile-background-color: #ffffff;
-  /* Usado como cor de fundo para o menu de navegação móvel */
   --nav-dropdown-background-color: #ffffff;
-  /* Usado como cor de fundo para itens de dropdown que aparecem ao passar o mouse sobre itens de navegação principais */
   --nav-dropdown-color: #444444;
-  /* Cor dos links dos itens de dropdown no menu de navegação */
   --nav-dropdown-hover-color: #3c7d7a;
-  /* Verde mais vivo para links de dropdown quando são sobrepostos */
 
   /* Smooth scroll */
   scroll-behavior: smooth;
+
+  /* Typography Scale - Ajustada para Goudy Old Style */
+  --font-size-base: 1.25rem; /* 18px - Tamanho base maior para melhor legibilidade */
+  --font-size-sm: 1rem; /* 16px - Para textos menores ou secundários */
+  --font-size-md: 1.25rem; /* 20px - Para textos médios, como parágrafos */
+  --font-size-lg: 1.5rem; /* 24px - Para subtítulos ou textos destacados */
+  --font-size-xl: 1.7rem; /* 32px - Para títulos médios */
+  --font-size-xxl: 1.8rem; /* 40px - Para títulos grandes */
+  --font-size-xxxl: 2rem; /* 48px - Para títulos principais ou hero sections */
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the same color scheme. */
-
+/* Color Presets */
 .light-background {
   --background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   --surface-color: #ffffff;
@@ -72,6 +66,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  font-size: var(--font-size-base);
 }
 
 a {
@@ -96,8 +91,31 @@ h6 {
   letter-spacing: var(--heading-letter-spacing);
 }
 
-/* Pulsating Play Button
-------------------------------*/
+h1 {
+  font-size: var(--font-size-xxxl); /* 40px */
+}
+
+h2 {
+  font-size: var(--font-size-xxl); /* 32px */
+}
+
+h3 {
+  font-size: var(--font-size-xl); /* 24px */
+}
+
+h4 {
+  font-size: var(--font-size-lg); /* 20px */
+}
+
+h5 {
+  font-size: var(--font-size-md); /* 18px */
+}
+
+h6 {
+  font-size: var(--font-size-base); /* 16px */
+}
+
+/* Pulsating Play Button */
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
@@ -176,8 +194,7 @@ h6 {
   }
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages */
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -231,7 +248,6 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -244,7 +260,7 @@ h6 {
   background-color: var(--accent-color);
   height: 40px;
   padding: 0;
-  font-size: 18px;
+  font-size: var(--font-size-sm); /* 18px */
   transition: all 0.5s;
 }
 
@@ -268,7 +284,7 @@ h6 {
 
   .header .topbar .contact-info i a,
   .header .topbar .contact-info i span {
-    font-size: 15px;
+    font-size: var(--font-size-sm); /* 14px */
     line-height: 15px;
   }
 }
@@ -311,14 +327,13 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 1.7rem;
+  font-size: var(--font-size-xl); /* 24px */
   font-family: var(--heading-font);
   margin-top: 6px;
   font-weight: 500;
   color: var(--heading-color);
   line-height: 1;
   letter-spacing: var(--heading-letter-spacing);
-  /* Garante que o texto não fique com espaçamento vertical extra */
 }
 
 /* Call to Action Button */
@@ -326,7 +341,7 @@ h6 {
 .header .cta-btn:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   padding: 5px 10px;
   margin: 0 0 0 30px;
   border-radius: 60px;
@@ -370,26 +385,20 @@ h6 {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
-    /* Impede que o menu de navegação quebre para uma nova linha */
   }
 
   .header .mobile-nav-toggle {
     order: 1;
-    /* Garante que o ícone do toggle fique no início */
   }
 
   .header .logo {
     order: 2;
-    /* Garante que o logo fique depois do toggle */
   }
 
   .header .cta-btn {
     order: 3;
-    /* Garante que o botão CTA fique depois do logo */
     margin: 0;
-
     border-radius: 50%;
-    /* Torna o botão redondo */
   }
 }
 
@@ -443,7 +452,7 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 18px;
+    font-size: var(--font-size-md); /* 18px */
     padding: 0 2px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -457,7 +466,7 @@ h6 {
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
+    font-size: var(--font-size-sm); /* 14px */
     line-height: 0;
     margin-left: 5px;
     transition: 0.3s;
@@ -510,13 +519,13 @@ h6 {
 
   .navmenu .dropdown ul a {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: var(--font-size-md); /* 18px */
     text-transform: none;
     color: var(--nav-dropdown-color);
   }
 
   .navmenu .dropdown ul a i {
-    font-size: 12px;
+    font-size: var(--font-size-sm); /* 14px */
   }
 
   .navmenu .dropdown ul a:hover,
@@ -549,7 +558,7 @@ h6 {
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: var(--font-size-xl); /* 24px */
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -587,7 +596,7 @@ h6 {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 18px;
+    font-size: var(--font-size-md); /* 18px */
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -598,7 +607,7 @@ h6 {
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
+    font-size: var(--font-size-sm); /* 14px */
     line-height: 0;
     margin-left: 5px;
     width: 30px;
@@ -656,7 +665,7 @@ h6 {
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
-    font-size: 32px;
+    font-size: var(--font-size-xxl); /* 32px */
     top: 15px;
     right: 15px;
     margin-right: 0;
@@ -681,10 +690,9 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   --accent-color: #3c7d7a;
-  /* Verde mais sofisticado e elegante */
   color: var(--default-color);
   background-color: var(--background-color);
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   text-align: center;
   padding: 30px 0;
   position: relative;
@@ -693,19 +701,14 @@ h6 {
 
 .footer img {
   width: 100%;
-  /* Ajusta a largura da imagem para 100% do elemento pai */
   max-width: 300px;
-  /* Define uma largura máxima para a imagem (ajuste conforme necessário) */
   height: auto;
-  /* Mantém a proporção da imagem */
   display: block;
-  /* Remove qualquer espaçamento indesejado abaixo da imagem */
   margin: 0 auto;
-  /* Centraliza a imagem horizontalmente */
 }
 
 .footer h3 {
-  font-size: 23px;
+  font-size: var(--font-size-xl); /* 24px */
   font-weight: 500;
   position: relative;
   padding: 0;
@@ -713,7 +716,7 @@ h6 {
 }
 
 .footer p {
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   padding: 0;
   margin: 0 0 20px 0;
 }
@@ -723,7 +726,7 @@ h6 {
 }
 
 .footer .social-links a {
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -745,13 +748,13 @@ h6 {
 
 .footer .copyright {
   padding-top: 25px;
-  font-size: 15px;
+  font-size: var(--font-size-sm); /* 14px */
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .credits,
 .footer .credits span {
-  font-size: 15px;
+  font-size: var(--font-size-sm); /* 14px */
   padding-top: 5px;
 }
 
@@ -808,7 +811,7 @@ h6 {
 }
 
 .scroll-top i {
-  font-size: 24px;
+  font-size: var(--font-size-lg); /* 20px */
   color: var(--contrast-color);
   line-height: 0;
 }
@@ -847,7 +850,7 @@ h6 {
 }
 
 .page-title .heading h1 {
-  font-size: 38px;
+  font-size: var(--font-size-xxxl); /* 40px */
   font-weight: 500;
 }
 
@@ -861,7 +864,7 @@ h6 {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  font-size: 19px;
+  font-size: var(--font-size-md); /* 18px */
   font-weight: 600;
 }
 
@@ -906,7 +909,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 1.7rem;
+  font-size: var(--font-size-xxl); /* 32px */
   font-weight: 500;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1008,7 +1011,7 @@ section,
   color: var(--contrast-color);
   padding: 10px 20px;
   border-radius: 50px;
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   letter-spacing: var(--heading-letter-spacing);
   font-weight: 500;
   text-decoration: none;
@@ -1055,16 +1058,14 @@ section,
 /* Estiliza o vídeo */
 .video-container video {
   width: 100%;
-  /* Responsividade */
   height: auto;
   display: block;
   z-index: 1;
   border-radius: 10px;
-  /* Alinha com o contêiner */
 }
 
 .about .content h3 {
-  font-size: 1.7rem;
+  font-size: var(--font-size-xl); /* 24px */
   font-weight: 500;
 }
 
@@ -1081,18 +1082,18 @@ section,
 
 .about .content ul i {
   flex-shrink: 0;
-  font-size: 48px;
+  font-size: var(--font-size-xxl); /* 32px */
   color: var(--accent-color);
   margin-right: 20px;
 }
 
 .about .content ul h5 {
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 20px */
   font-weight: 500;
 }
 
 .about .content ul p {
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
 }
 
 .about .content p:last-child {
@@ -1125,7 +1126,6 @@ section,
 #plans {
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
   overflow: visible;
-  /* Garante que a sombra não será cortada */
 }
 
 /*--------------------------------------------------------------
@@ -1158,7 +1158,7 @@ section,
 
 .services .service-item .icon i {
   color: var(--contrast-color);
-  font-size: 28px;
+  font-size: var(--font-size-xl); /* 24px */
   transition: ease-in-out 0.3s;
 }
 
@@ -1178,21 +1178,19 @@ section,
 .services .service-item h3 {
   font-weight: 500;
   margin: 10px 0 15px 0;
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 20px */
 }
 
 .services .service-item p {
   line-height: 24px;
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   margin-bottom: 0;
 }
 
 .services .button-container {
   display: flex;
   justify-content: center;
-  /* Centraliza horizontalmente */
   margin: 15px 0;
-  /* Adiciona espaço acima e abaixo do botão */
 }
 
 .services .more-btn-s {
@@ -1200,23 +1198,16 @@ section,
   color: var(--contrast-color);
   margin-top: 15px;
   border: none;
-  /* Remove a borda padrão */
   padding: 10px 20px;
-  /* Adiciona padding ao botão */
   border-radius: 40px;
-  /* Bordas arredondadas */
-  font-size: 18px;
-  /* Tamanho da fonte */
+  font-size: var(--font-size-md); /* 18px */
   cursor: pointer;
-  /* Cursor muda para pointer */
   transition: background-color 0.3s;
-  /* Transição suave */
 }
 
 .more-btn-s:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 40%);
   cursor: pointer;
-  /* Muda o cursor para indicar interatividade */
 }
 
 /*--------------------------------------------------------------
@@ -1238,7 +1229,7 @@ section,
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   border-radius: 0;
   box-shadow: none;
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   padding: 10px !important;
 }
 
@@ -1277,404 +1268,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Departments Section
---------------------------------------------------------------*/
-.departments {
-  overflow: hidden;
-}
-
-.departments .nav-tabs {
-  border: 0;
-}
-
-.departments .nav-link {
-  border: 0;
-  padding: 12px 15px 12px;
-  transition: 0.3s;
-  color: var(--default-color);
-  /* Cor padrão do texto */
-  border-radius: 0;
-  border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.departments .nav-link:hover {
-  color: var(--accent-color);
-  /* Cor do texto ao passar o mouse */
-}
-
-.departments .nav-link.active {
-  color: #ffffff;
-  /* Cor do texto da aba ativa em branco */
-  border-color: var(--accent-color);
-  /* Cor da borda da aba ativa */
-  background-color: var(--accent-color);
-  /* Cor de fundo da aba ativa */
-}
-
-.departments .tab-pane.active {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.departments .details h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.departments .details p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.departments .details p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-  .departments .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-
-  .departments .nav-link.active {
-    color: #ffffff;
-    /* Cor do texto da aba ativa em branco em dispositivos menores */
-    background: var(--accent-color);
-    /* Cor de fundo da aba ativa em dispositivos menores */
-  }
-}
-
-/*--------------------------------------------------------------
-# Doctors Section
---------------------------------------------------------------*/
-.doctors .team-member {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  border-radius: 10px;
-  transition: 0.5s;
-  padding: 30px;
-  height: 100%;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-}
-
-.doctors .team-member .pic {
-  overflow: hidden;
-  width: 150px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.doctors .team-member .pic img {
-  transition: ease-in-out 0.3s;
-}
-
-.doctors .team-member:hover {
-  transform: translateY(-10px);
-}
-
-.doctors .team-member .member-info {
-  padding-left: 30px;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member .member-info {
-    padding: 30px 0 0 0;
-    text-align: center;
-  }
-}
-
-.doctors .team-member h4 {
-  font-weight: 500;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-.doctors .team-member span {
-  display: block;
-  font-size: 18px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
-}
-
-.doctors .team-member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: color-mix(in srgb, var(--default-color), transparent 85%);
-  bottom: 0;
-  left: 0;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member span::after {
-    left: calc(50% - 25px);
-  }
-}
-
-.doctors .team-member p {
-  margin: 10px 0 0 0;
-  font-size: 18px;
-}
-
-.doctors .team-member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-}
-
-@media (max-width: 468px) {
-  .doctors .team-member .social {
-    justify-content: center;
-  }
-}
-
-.doctors .team-member .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 94%);
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 36px;
-  height: 36px;
-}
-
-.doctors .team-member .social a i {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 19px;
-  margin: 0 2px;
-}
-
-.doctors .team-member .social a:hover {
-  background: var(--accent-color);
-}
-
-.doctors .team-member .social a:hover i {
-  color: var(--contrast-color);
-}
-
-.doctors .team-member .social a+a {
-  margin-left: 8px;
-}
-
-/*--------------------------------------------------------------
-# Faq Section
---------------------------------------------------------------*/
-.faq .content h3 {
-  font-weight: 400;
-  font-size: 34px;
-}
-
-.faq .content p {
-  font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.faq .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: flex-start;
-}
-
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 19px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .info h3 {
-  font-weight: 500;
-  font-size: 32px;
-}
-
-.testimonials .swiper {
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
-  background-color: var(--surface-color);
-}
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  min-height: 200px;
-  position: relative;
-  margin: 30px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50px;
-  border: 6px solid var(--background-color);
-  margin-right: 10px;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-
-.testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 18px;
-  margin: 0;
-}
-
-.testimonials .testimonial-item .stars {
-  margin: 10px 0;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 15px auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-  border: none;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-@media (max-width: 767px) {
-
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
-    overflow: hidden;
-  }
-
-  .testimonials .testimonial-item {
-    margin: 15px;
-  }
-}
-
-/*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
 .gallery .gallery-item {
@@ -1702,7 +1295,7 @@ section,
 .contact .info-item i {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 20px;
+  font-size: var(--font-size-lg); /* 20px */
   width: 44px;
   height: 44px;
   display: flex;
@@ -1720,7 +1313,7 @@ section,
 
 .contact .info-item h3 {
   padding: 0;
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 20px */
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -1728,7 +1321,7 @@ section,
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
 }
 
 .contact .php-email-form {
@@ -1738,7 +1331,7 @@ section,
 .contact .php-email-form input[type="text"],
 .contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
-  font-size: 18px;
+  font-size: var(--font-size-md); /* 18px */
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
@@ -1795,11 +1388,9 @@ section,
 
 .compact-value-list li::before {
   content: "✓";
-  /* Código do ícone de check do Font Awesome */
   color: #333;
-  font-size: 12px;
+  font-size: var(--font-size-sm); /* 14px */
   margin-right: 8px;
   position: relative;
   bottom: -1px;
-  /* Alinha o marcador com o texto */
 }
