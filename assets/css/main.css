@@ -1214,7 +1214,7 @@ section,
 }
 
 .custom-border {
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px; /* Borda arredondada */
 }
 
@@ -1240,7 +1240,7 @@ section,
 
 @media (max-width: 768px) {
   .plans-inner img {
-      margin-right: 10px; /* Espaçamento menor para mobile */
+      margin-right: 12px; /* Espaçamento menor para mobile */
   }
 
   .plans-inner {
