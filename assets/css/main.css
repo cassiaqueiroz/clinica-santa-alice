@@ -714,8 +714,7 @@ h6 {
 # Global Footer - Estilo Semelhante ao Hero
 --------------------------------------------------------------*/
 .footer {
-  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.15);
-  --accent-color: #3c7d7a;
+  border-top: 1px solid rgba(44, 107, 111, 0.05);
   color: var(--default-color);
   background: linear-gradient(135deg,
       color-mix(in srgb, var(--accent-color), transparent 98%) 50%, color-mix(in srgb, var(--accent-color), transparent 95%) color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
@@ -894,6 +893,7 @@ h6 {
   /* 20px */
   color: var(--contrast-color);
   line-height: 0;
+  font-weight: 700;
 }
 
 .scroll-top:hover {
@@ -1097,8 +1097,7 @@ section,
   border-radius: 50px;
   font-size: var(--font-size-base);
   /* 18px */
-  letter-spacing: var(--heading-letter-spacing);
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, background 0.3s ease;
@@ -1207,15 +1206,17 @@ section,
   overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
   padding: auto; /* Espaçamento vertical */
-  box-shadow:3px 0 4px rgba(44, 107, 111, 0.15);
-}
+  border: none;
+  border-top: 1px solid rgba(44, 107, 111, 0.05);
+  border-bottom: 1px solid rgba(44, 107, 111, 0.05);
+  }
 
 .plans-container {
   display: flex; /* Flexbox para alinhar as imagens horizontalmente */
 }
 
 .custom-border {
-  box-shadow: 0px 6px 20px rgba(44, 107, 111, 0.2);
+  box-shadow: 0px 6px 20px rgba(44, 107, 111, 0.15);
   border-radius: 10px; /* Borda arredondada */
 }
 
@@ -1259,11 +1260,12 @@ section,
 .services .service-item {
   background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   text-align: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   height: 100%;
   border-radius: 10px;
+  margin: 0 10px;
+  border: 1px solid rgba(44, 107, 111, 0.05);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -1305,13 +1307,14 @@ section,
   font-weight: 500;
   margin: 10px 0 15px 0;
   font-size: var(--font-size-md);
-  /* 20px */
+  padding: 10px;
 }
 
 .services .service-item p {
   line-height: 24px;
+  text-align: justify;
+  padding: 10px;
   font-size: var(--font-size-md);
-  /* 18px */
   margin-bottom: 0;
 }
 
@@ -1328,6 +1331,7 @@ section,
   border: none;
   padding: 10px 20px;
   border-radius: 40px;
+  font-weight: 700;
   font-size: var(--font-size-md);
   /* 18px */
   cursor: pointer;
@@ -1391,6 +1395,7 @@ section,
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
+  font-weight: 700;
   border-radius: 50px;
 }
 
@@ -1503,6 +1508,7 @@ section,
   padding: 10px 36px;
   transition: 0.4s;
   border-radius: 50px;
+  font-weight: 700;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
