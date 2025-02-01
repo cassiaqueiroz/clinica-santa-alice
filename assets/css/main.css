@@ -1037,14 +1037,14 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
 .hero-2 {
   position: relative;
   background: linear-gradient(135deg,
       color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
       color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
       transparent 50%);
-  padding: 0 10px;
+  padding: 50px 10px;
+  /* Aumentei o padding para criar mais espaço */
 }
 
 .hero-2::before {
@@ -1065,15 +1065,9 @@ section,
   z-index: 1;
 }
 
+
 .hero-2 .hero-buttons .btn {
   margin-bottom: 2rem;
-}
-
-@media (max-width: 992px) {
-  .hero-2 .hero-content {
-    text-align: center;
-    margin-top: 5rem;
-  }
 }
 
 /* Animação pulsante para o botão */
@@ -1118,25 +1112,27 @@ section,
   border-radius: 10px;
 }
 
-@keyframes float-badge {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+/* Espaçamento adicional para a segunda imagem */
+.hero-2 .hero-second-image {
+  margin-bottom: 40px;
+  /* Ajuste o valor conforme necessário */
 }
 
+@media (max-width: 992px) {
+  .hero-2 .hero-content {
+    text-align: center;
+    margin-top: 5rem;
+  }
+}
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-/* Estiliza o vídeo */
+.about {
+  padding: 50px 10px;
+  /* Aumentei o padding para criar mais espaço */
+}
+
 .video-container video {
   width: 100%;
   height: auto;
@@ -1146,17 +1142,12 @@ section,
   margin-bottom: 10px;
 }
 
-.about {
-  padding: 0 10px;
-}
-
 .about .content {
   margin-bottom: 2em;
 }
 
 .about .content h3 {
   font-size: var(--font-size-xl);
-  /* 24px */
   font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
@@ -1167,7 +1158,7 @@ section,
 }
 
 .about .content li p {
-  text-align: left; /* ou o alinhamento desejado */
+  text-align: left;
 }
 
 .about .content ul {
@@ -1184,20 +1175,17 @@ section,
 .about .content ul i {
   flex-shrink: 0;
   font-size: var(--font-size-xxl);
-  /* 32px */
   color: var(--accent-color);
   margin-right: 20px;
 }
 
 .about .content ul h5 {
   font-size: var(--font-size-md);
-  /* 20px */
   font-weight: 500;
 }
 
 .about .content ul p {
   font-size: var(--font-size-md);
-  /* 18px */
 }
 
 .about .content p:last-child {
@@ -1259,13 +1247,13 @@ section,
   width: 150px;
   /* Tamanho das imagens */
   height: auto;
-  margin-right: 20px;
+  margin-right: 24px;
   /* Espaçamento entre as imagens */
 }
 
 @media (max-width: 768px) {
   .plans-inner img {
-    margin-right: 12px;
+    margin-right: 15px;
     /* Espaçamento menor para mobile */
   }
 
@@ -1430,7 +1418,8 @@ section,
   transition: 0.4s;
   font-weight: 700;
   border-radius: 50px;
-  cursor: pointer; /* Indica que é clicável */
+  cursor: pointer;
+  /* Indica que é clicável */
 }
 
 .appointment .php-email-form button[type="submit"]:hover {
