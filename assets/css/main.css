@@ -1153,11 +1153,7 @@ section,
 }
 
 .about {
-  padding: 10px;
-}
-
-.about .container {
-  margin: 0 10px;
+  padding: auto 10px;
 }
 
 .about .content h3 {
@@ -1430,9 +1426,6 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
-.gallery {
-  padding: auto 5px;
-}
 
 .gallery .gallery-item {
   overflow: hidden;
