@@ -1034,8 +1034,6 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 
-/* hero-2 */
-
 .hero-2 {
   position: relative;
   background: linear-gradient(135deg,
@@ -1120,6 +1118,7 @@ section,
 .hero-2 .hero-image img {
   max-width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 @keyframes float-badge {
