@@ -1044,7 +1044,7 @@ section,
       color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
       color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
       transparent 50%);
-  padding: auto 10px;
+  padding: 0 10px;
 }
 
 .hero-2::before {
@@ -1112,15 +1112,8 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-
-.hero-2 .hero-image {
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
-
 .hero-2 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -1150,10 +1143,15 @@ section,
   display: block;
   z-index: 1;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .about {
-  padding: 10px 0;
+  padding: 0 10px;
+}
+
+.about .content {
+  margin-bottom: 2em;
 }
 
 .about .content h3 {
@@ -1161,6 +1159,7 @@ section,
   /* 24px */
   font-weight: 500;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .about .content p {
@@ -1202,7 +1201,7 @@ section,
 }
 
 .about .content p:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1px;
 }
 
 .about .pulsating-play-btn {
@@ -1219,6 +1218,7 @@ section,
   /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
   padding: auto;
+  padding-bottom: 4em;
   /* Espaçamento vertical */
   border: none;
   border-top: 1px solid rgba(44, 107, 111, 0.05);
