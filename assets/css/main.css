@@ -1377,7 +1377,11 @@ section,
 --------------------------------------------------------------*/
 .appointment .php-email-form {
   width: 100%;
-  padding: auto 10px;
+  padding: 0 10px;
+}
+
+.appointment form {
+  padding: 0 10px;
 }
 
 .appointment .php-email-form .form-group {
@@ -1426,6 +1430,7 @@ section,
   transition: 0.4s;
   font-weight: 700;
   border-radius: 50px;
+  cursor: pointer; /* Indica que é clicável */
 }
 
 .appointment .php-email-form button[type="submit"]:hover {
@@ -1455,6 +1460,10 @@ section,
 --------------------------------------------------------------*/
 .contact {
   padding: auto 10px;
+}
+
+.contact form {
+  margin: auto 10px;
 }
 
 .contact .info-item+.info-item {
