@@ -69,6 +69,10 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -1088,7 +1092,7 @@ section,
 }
 
 .hero-2 .btn-primary {
-  border-color: var(--accent-color);
+  border: none;
   display: inline-block;
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -1149,8 +1153,11 @@ section,
 }
 
 .about {
-  padding: auto 10px;
+  padding: 10px;
+}
 
+.about .container {
+  margin: 0 10px;
 }
 
 .about .content h3 {
