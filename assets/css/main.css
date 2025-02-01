@@ -267,7 +267,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 20%);
   transition: all 0.5s;
   z-index: 997;
 }
