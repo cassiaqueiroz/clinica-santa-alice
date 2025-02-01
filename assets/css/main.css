@@ -1324,6 +1324,10 @@ section,
   margin: 15px 0;
 }
 
+.modal .btn-close {
+  font-size: var(--font-size-sm);
+}
+
 .services .more-btn-s {
   background-color: var(--accent-color);
   color: var(--contrast-color);
