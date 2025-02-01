@@ -1285,7 +1285,7 @@ section,
 .services .service-item {
   background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   transition: all ease-in-out 0.3s;
   height: 100%;
   border-radius: 10px;
