@@ -1202,11 +1202,10 @@ section,
 # Plans Section - Letreiro Infinito
 --------------------------------------------------------------*/
 .plans {
-  overflow:hidden;
+  overflow: clip;
   /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
-  padding: auto;
-  padding-bottom: 4.5em;
+  padding-bottom: 4.4em;
   /* Espaçamento vertical */
   border: none;
   border-top: 1px solid rgba(44, 107, 111, 0.05);
