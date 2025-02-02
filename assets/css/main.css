@@ -1202,7 +1202,7 @@ section,
 # Plans Section - Letreiro Infinito
 --------------------------------------------------------------*/
 .plans {
-  overflow: visible;
+  overflow:hidden;
   /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
   padding: auto;
