@@ -1212,7 +1212,6 @@ section,
 }
 
 .custom-border {
-  box-shadow: 0 -5px 10px rgba(60, 125, 122, 0.1);
   transition: box-shadow 0.3s ease,
     transform 0.3s ease;
   /* Adiciona transição suave */
@@ -1235,7 +1234,7 @@ section,
 
 .plans .swiper-slide img {
   transition: 0.3s;
-  width: 150px;
+  width: 160px;
   padding: 8px;
   /* Tamanho das imagens */
   height: auto;
