@@ -1214,7 +1214,7 @@ section,
 
 .custom-border {
   box-shadow: 0px 2px 14px rgba(44, 107, 111, 0.15);
-  border-radius: 10px;
+  border-radius: 8px;
   /* Borda arredondada */
 }
 
@@ -1241,8 +1241,6 @@ section,
 
 .plans .swiper-slide img:hover {
   transform: scale(1.1);
-  box-shadow: 0px 8px 20px rgba(44, 107, 111, 0.15);
-
 }
 
 
