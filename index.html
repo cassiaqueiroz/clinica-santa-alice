@@ -44,10 +44,8 @@
       <div class="topbar d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
           <div class="contact-info d-flex align-items-center">
-            <i class="bi bi-phone d-flex align-items-center ms-4"><span>
-                (21) 3420-5815 /
-                (21) 3195-3728 /
-                (21) 97272-1545
+            <i class="bi bi-phone d-flex align-items-center"><span>
+                (21)3420-5815/ (21)3195-3728/ (21)97272-1545
               </span>
             </i>
           </div>
@@ -193,49 +191,60 @@
 
       </section><!-- /About Section -->
 
-      <!-- Plans Section -->
       <section id="plans" class="plans section light-background">
 
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Planos</h2>
-        </div><!-- End Section Title -->
-
-        <!-- Container do Letreiro Infinito -->
-        <div class="plans-container">
-          <div class="plans-inner">
-            <img src="assets/img/plano-de-saude-unimed-nacional.webp" alt="plan 1" class="img-fluid custom-border">
-            <img src="assets/img/amil.png" alt="plan 2" class="img-fluid custom-border">
-            <img src="assets/img/assim_saude_logo-removebg-preview.png" alt="plan 3" class="img-fluid custom-border">
-            <img src="assets/img/blue.png" alt="plan 4" class="img-fluid custom-border">
-            <img src="assets/img/cemeru-logo.png" alt="plan 5" class="img-fluid custom-border">
-            <img src="assets/img/plano-de-saude-unimed-nacional.webp" alt="plan 1" class="img-fluid custom-border">
-            <img src="assets/img/amil.png" alt="plan 2" class="img-fluid custom-border">
-            <img src="assets/img/assim_saude_logo-removebg-preview.png" alt="plan 3" class="img-fluid custom-border">
-            <img src="assets/img/blue.png" alt="plan 4" class="img-fluid custom-border">
-            <img src="assets/img/cemeru-logo.png" alt="plan 5" class="img-fluid custom-border">
-            <!-- Duplicando as imagens -->
-            <img src="assets/img/plano-de-saude-unimed-nacional.webp" alt="plan 1" class="img-fluid custom-border">
-            <img src="assets/img/amil.png" alt="plan 2" class="img-fluid custom-border">
-            <img src="assets/img/assim_saude_logo-removebg-preview.png" alt="plan 3" class="img-fluid custom-border">
-            <img src="assets/img/blue.png" alt="plan 4" class="img-fluid custom-border">
-            <img src="assets/img/cemeru-logo.png" alt="plan 5" class="img-fluid custom-border">
-            <img src="assets/img/plano-de-saude-unimed-nacional.webp" alt="plan 1" class="img-fluid custom-border">
-            <img src="assets/img/amil.png" alt="plan 2" class="img-fluid custom-border">
-            <img src="assets/img/assim_saude_logo-removebg-preview.png" alt="plan 3" class="img-fluid custom-border">
-            <img src="assets/img/blue.png" alt="plan 4" class="img-fluid custom-border">
-            <img src="assets/img/cemeru-logo.png" alt="plan 5" class="img-fluid custom-border">
-            <img src="assets/img/plano-de-saude-unimed-nacional.webp" alt="plan 1" class="img-fluid custom-border">
-            <img src="assets/img/amil.png" alt="plan 2" class="img-fluid custom-border">
-            <img src="assets/img/assim_saude_logo-removebg-preview.png" alt="plan 3" class="img-fluid custom-border">
-            <img src="assets/img/blue.png" alt="plan 4" class="img-fluid custom-border">
-            <img src="assets/img/cemeru-logo.png" alt="plan 5" class="img-fluid custom-border">
-          </div>
         </div>
 
+        <div class="container" data-no-editable="true">
 
-      </section><!-- /Plans Section -->
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed" : 1000,
+                "autoplay": {
+                  "delay": 1000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 10
+                  },
+                  "480": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 30
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 40
+                  },
+                  "992": {
+                    "slidesPerView": 5,
+                    "spaceBetween": 60
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide"><img src="assets/img/plano-de-saude-unimed-nacional.webp" class="img-fluid custom-border" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/amil.png" class="img-fluid custom-border" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/assim_saude_logo-removebg-preview.png" class="img-fluid custom-border" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/blue.png" class="img-fluid custom-border" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/cemeru-logo.png" class="img-fluid custom-border" alt=""></div>
+            </div>
+          </div>
 
+        </div>
+
+      </section>
 
 
       <!-- Services Section -->
