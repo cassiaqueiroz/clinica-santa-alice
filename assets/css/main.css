@@ -1205,62 +1205,44 @@ section,
   overflow: clip;
   /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
-  padding-bottom: 4.4em;
+  padding-bottom: 4.5em;
   /* Espaçamento vertical */
   border: none;
   border-top: 1px solid rgba(44, 107, 111, 0.05);
   border-bottom: 1px solid rgba(44, 107, 111, 0.05);
 }
 
-.plans-container {
-  display: flex;
-  /* Flexbox para alinhar as imagens horizontalmente */
-}
-
 .custom-border {
-  box-shadow: 0px 6px 20px rgba(44, 107, 111, 0.15);
+  box-shadow: 0px 4px 6px rgba(44, 107, 111, 0.15);
   border-radius: 10px;
   /* Borda arredondada */
 }
 
-.plans-inner {
+.plans .swiper {
+  padding: 10px 0;
+}
+
+.plans .swiper-wrapper {
+  height: auto;
   display: flex;
-  /* Flexbox para alinhar as imagens */
-  animation: scrollPlans 15s cubic-bezier(0.25, 0.1, 0.25, 0.1) infinite alternate;
-  /* Animação de rolagem */
 }
 
-@keyframes scrollPlans {
-  from {
-    transform: translateX(0%);
-    /* Começa na posição original */
-  }
-
-  to {
-    transform: translateX(-100%);
-    /* Move para a esquerda até o fim do contêiner */
-  }
+.plans .swiper-slide {
+  display: flex;
 }
 
-.plans-inner img {
+.plans .swiper-slide img {
+  transition: 0.3s;
   width: 150px;
+  padding: 8px;
   /* Tamanho das imagens */
   height: auto;
-  margin-right: 24px;
-  /* Espaçamento entre as imagens */
 }
 
-@media (max-width: 768px) {
-  .plans-inner img {
-    margin-right: 15px;
-    /* Espaçamento menor para mobile */
-  }
-
-  .plans-inner {
-    animation-duration: 10s;
-    /* Diminui a duração da animação em dispositivos móveis */
-  }
+.plans .swiper-slide img:hover {
+  transform: scale(1.1);
 }
+
 
 /*--------------------------------------------------------------
 # Services Section
