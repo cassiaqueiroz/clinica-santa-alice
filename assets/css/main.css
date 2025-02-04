@@ -1212,14 +1212,11 @@ section,
 }
 
 .custom-border {
-  box-shadow: -2px 0 10px rgba(60, 125, 122, 0.1);
+  box-shadow: 0 -5px 10px rgba(60, 125, 122, 0.1);
   transition: box-shadow 0.3s ease,
     transform 0.3s ease;
   /* Adiciona transição suave */
   border-radius: 8px;
-  transform: perspective(500px) rotateY(-4deg);
-
-
 }
 
 .plans .swiper {
@@ -1245,8 +1242,9 @@ section,
 }
 
 .plans .swiper-slide img:hover {
-  box-shadow: -3px 0 10px rgba(60, 125, 122, 0.05);
-  transform: scale(1.1);
+  transform: scale(1.05);
+  box-shadow: none;
+
 }
 
 /*--------------------------------------------------------------
