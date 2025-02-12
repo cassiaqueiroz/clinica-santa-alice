@@ -10,14 +10,17 @@ class FormSubmit {
   }
 
   displaySuccess() {
-    document.querySelector(".sent-message").style.display = "block";
-    document.querySelector(".error-message").style.display = "none";
-    this.form.reset();
+    const successMessage = document.createElement("div");
+    successMessage.classList.add("success-message");
+    successMessage.innerText = this.settings.success;
+    this.form.parentNode.insertBefore(successMessage, this.form.nextSibling);
   }
 
   displayError() {
-    document.querySelector(".error-message").style.display = "block";
-    document.querySelector(".sent-message").style.display = "none";
+    const errorMessage = document.createElement("div");
+    errorMessage.classList.add("error-message");
+    errorMessage.innerText = this.settings.error;
+    this.form.parentNode.insertBefore(errorMessage, this.form.nextSibling);
   }
 
   getFormObject() {
@@ -59,7 +62,6 @@ class FormSubmit {
     event.preventDefault();
     this.formButton.disabled = true;
     this.formButton.innerText = "Enviando...";
-    document.querySelector(".loading").style.display = "block";
   }
 
   async sendForm(event) {
@@ -88,7 +90,6 @@ class FormSubmit {
     } finally {
       this.formButton.disabled = false;
       this.formButton.innerText = "Agendar";
-      document.querySelector(".loading").style.display = "none";
     }
   }
 
