@@ -1,40 +1,36 @@
 class FormSubmit {
   constructor(settings) {
     this.settings = settings;
-    this.form = document.querySelector(settings.form);
-    this.formButton = document.querySelector(settings.button);
-    if (this.form) {
-      this.url = this.form.getAttribute("action");
+    this.forms = document.querySelectorAll(settings.form);
+    if (this.forms.length) {
+      this.init();
     }
-    this.sendForm = this.sendForm.bind(this);
   }
 
-  displaySuccess() {
-    const successMessage = document.createElement("div");
-    successMessage.classList.add("success-message");
-    successMessage.innerText = this.settings.success;
-    this.form.parentNode.insertBefore(successMessage, this.form.nextSibling);
+  displayMessage(form, message, type) {
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add(type === "success" ? "success-message" : "error-message");
+    messageDiv.innerText = message;
+
+    form.parentNode.insertBefore(messageDiv, form.nextSibling);
+
+    setTimeout(() => {
+      messageDiv.remove();
+    }, 4000);
   }
 
-  displayError() {
-    const errorMessage = document.createElement("div");
-    errorMessage.classList.add("error-message");
-    errorMessage.innerText = this.settings.error;
-    this.form.parentNode.insertBefore(errorMessage, this.form.nextSibling);
-  }
-
-  getFormObject() {
+  getFormObject(form) {
     const formObject = {};
-    const fields = this.form.querySelectorAll("[name]");
+    const fields = form.querySelectorAll("[name]");
     fields.forEach((field) => {
       formObject[field.getAttribute("name")] = field.value.trim();
     });
     return formObject;
   }
 
-  validateFields() {
+  validateFields(form) {
     let isValid = true;
-    const fields = this.form.querySelectorAll("[name]");
+    const fields = form.querySelectorAll("[name]");
 
     fields.forEach((field) => {
       if (!field.value.trim()) {
@@ -58,53 +54,56 @@ class FormSubmit {
     return isValid;
   }
 
-  onSubmission(event) {
-    event.preventDefault();
-    this.formButton.disabled = true;
-    this.formButton.innerText = "Enviando...";
-  }
-
   async sendForm(event) {
+    event.preventDefault();
+    const form = event.target;
+    const button = form.querySelector(this.settings.button);
+
+    if (!this.validateFields(form)) {
+      alert("Por favor, preencha todos os campos corretamente.");
+      return;
+    }
+
+    button.disabled = true;
+    button.innerText = "Enviando...";
+
     try {
-      if (!this.validateFields()) {
-        alert("Por favor, preencha todos os campos corretamente.");
-        return;
-      }
-      this.onSubmission(event);
-      const response = await fetch(this.url, {
+      const url = form.getAttribute("action");
+      const response = await fetch(url, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams(this.getFormObject()).toString(),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(this.getFormObject(form)).toString(),
       });
 
+      const responseText = await response.text();
+      console.log("Resposta do servidor:", responseText); // Verifica se algo estranho está sendo retornado
+
       if (response.ok) {
-        this.displaySuccess();
+        this.displayMessage(form, this.settings.success, "success");
+        form.reset();
       } else {
-        this.displayError();
+        this.displayMessage(form, this.settings.error, "error");
       }
     } catch (error) {
-      this.displayError();
+      this.displayMessage(form, this.settings.error, "error");
       console.error("Erro ao enviar:", error);
     } finally {
-      this.formButton.disabled = false;
-      this.formButton.innerText = "Agendar";
+      button.disabled = false;
+      button.innerText = "Enviar";
     }
   }
 
   init() {
-    if (this.form) {
-      this.formButton.addEventListener("click", this.sendForm);
-    }
-    return this;
+    this.forms.forEach((form) => {
+      form.addEventListener("submit", (event) => this.sendForm(event));
+    });
   }
 }
 
-const formSubmit = new FormSubmit({
+// eslint-disable-next-line no-new
+new FormSubmit({
   form: "[data-form]",
   button: "[data-button]",
   success: "Sua mensagem foi enviada com sucesso!",
   error: "Não foi possível enviar sua mensagem. Tente novamente.",
 });
-formSubmit.init();
