@@ -1531,6 +1531,135 @@ section,
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
+/* ======= Confirmation Page ======= */
+.confirmation {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  /* Fundo branco para combinar com o estilo do site */
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  /* Sombra suave */
+}
+
+.confirmation-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  /* Fundo branco para combinar com o estilo do site */
+  max-width: 800px;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+}
+
+.confirmation-container p {
+  font-size: 20px;
+  color: #444;
+  /* Cor do texto */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.confirmation-container a {
+  color: #444;
+  /* Cor dos links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.confirmation-container a:hover {
+  color: #ab9787;
+  /* Cor ao passar o mouse */
+}
+
+.confirmation-container .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #000;
+  /* Cor de fundo do botão */
+  color: #fff;
+  /* Cor do texto do botão */
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.confirmation-container .btn:hover {
+  background: #fff;
+  /* Cor de fundo ao passar o mouse */
+  color: #000;
+  /* Cor do texto ao passar o mouse */
+  border: 1px solid #000;
+  /* Borda ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .confirmation-container h1 {
+    font-size: 28px;
+    /* Título menor em dispositivos móveis */
+  }
+
+  .confirmation-container p {
+    font-size: 20px;
+    /* Texto menor em dispositivos móveis */
+  }
+}
+
+.breadcrumbs {
+  padding: 20px 0;
+  background-color: #3c7d7a;
+  min-height: 20px;
+  margin-top: 30px
+}
+
+.breadcrumbs h3 {
+  font-size: 26px;
+  font-weight: 100;
+  margin: 0;
+  color: white;
+}
+
+.breadcrumbs a {
+  color: #fff;
+}
+
+.breadcrumbs a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width:992px) {
+  .breadcrumbs {
+    margin-top: 20px
+  }
+
+  .breadcrumbs h3 {
+    margin: 0 0 10px
+  }
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.breadcrumbs ol li {
+  font-size: 20px;
+}
+
+.breadcrumbs ol li+li {
+  padding-left: 10px
+}
+
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
