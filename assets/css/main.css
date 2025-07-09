@@ -35,6 +35,16 @@
   /* Smooth scroll */
   scroll-behavior: smooth;
 
+  /* Consistent Spacing System */
+  --section-padding-horizontal: 20px;
+  /* Main horizontal padding for all sections */
+  --section-padding-vertical: 60px;
+  /* Main vertical padding for sections */
+  --form-padding-horizontal: 15px;
+  /* Horizontal padding for forms and inner content */
+  --container-max-padding: 25px;
+  /* Maximum padding for larger screens */
+
   /* Typography Scale - Ajustada para Goudy Old Style */
   --font-size-base: 1.25rem;
   /* 18px - Tamanho base maior para melhor legibilidade */
@@ -726,7 +736,7 @@ h6 {
   font-size: var(--font-size-md);
   /* 18px */
   text-align: center;
-  padding: 18px;
+  padding: 30px var(--section-padding-horizontal);
   position: relative;
   overflow: hidden;
 }
@@ -972,7 +982,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
   scroll-margin-top: 72px;
   overflow: clip;
 }
@@ -1043,7 +1053,7 @@ section,
       color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
       color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
       transparent 50%);
-  padding: 50px 10px;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 }
 
 .hero-2::before {
@@ -1129,8 +1139,7 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about {
-  padding: 50px 10px;
-  /* Aumentei o padding para criar mais espaço */
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 }
 
 .video-container video {
@@ -1205,8 +1214,8 @@ section,
   overflow: clip;
   /* Esconde o conteúdo que ultrapassa o container */
   position: relative;
-  padding-bottom: 4.5em;
-  /* Espaçamento vertical */
+  padding: 4.5em var(--section-padding-horizontal) 4.5em var(--section-padding-horizontal);
+  /* Consistent horizontal padding */
   border-top: 1px solid rgba(44, 107, 111, 0.12);
   border-bottom: 1px solid rgba(44, 107, 111, 0.12);
   box-shadow: 0 1px 0 rgba(44, 107, 111, 0.05), 0 -1px 0 rgba(44, 107, 111, 0.05);
@@ -1249,7 +1258,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  padding: auto 10px;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 }
 
 .services .service-item {
@@ -1259,9 +1268,9 @@ section,
   transition: all ease-in-out 0.3s;
   height: 100%;
   border-radius: 10px;
-  margin: 0 10px;
+  margin: 0 auto;
   border: 1px solid rgba(44, 107, 111, 0.05);
-  box-shadow: -2px 4px 12px rgba(44, 107, 111, 0.15), -1px 2px 4px rgba(44, 107, 111, 0.12);
+  box-shadow: -1px 2px 4px rgba(44, 107, 111, 0.15), -1px 2px 4px rgba(44, 107, 111, 0.12);
 }
 
 .services .service-item .icon {
@@ -1346,13 +1355,16 @@ section,
 /*--------------------------------------------------------------
 # Appointment Section
 --------------------------------------------------------------*/
+.appointment {
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+}
+
 .appointment .php-email-form {
   width: 100%;
-  padding: 0 10px;
 }
 
 .appointment form {
-  padding: 0 10px;
+  padding: 0;
 }
 
 .appointment .php-email-form .form-group {
@@ -1364,11 +1376,10 @@ section,
 .appointment .php-email-form select {
   color: var(--default-color);
   background-color: transparent;
-  border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 60%);
   border-radius: 5px;
   box-shadow: none;
   font-size: var(--font-size-md);
-  /* 18px */
   padding: 10px !important;
 }
 
@@ -1381,7 +1392,7 @@ section,
 .appointment .php-email-form input::placeholder,
 .appointment .php-email-form textarea::placeholder,
 .appointment .php-email-form select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
 .appointment .php-email-form input,
@@ -1414,11 +1425,20 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
+.gallery {
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+}
 
 .gallery .gallery-item {
   overflow: hidden;
-  margin: 10px;
+  margin: 10px 0 10px 0;
   border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .gallery .gallery-item {
+    margin: 5px;
+  }
 }
 
 .gallery .gallery-item img {
@@ -1434,7 +1454,7 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  padding: auto 10px;
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
 }
 
 .contact .info-item+.info-item {
@@ -1478,7 +1498,6 @@ section,
 
 .contact .php-email-form {
   width: 100%;
-  padding: 0 10px;
 }
 
 .contact .php-email-form .form-group {
@@ -1490,7 +1509,7 @@ section,
 .contact .php-email-form select {
   color: var(--default-color);
   background-color: transparent;
-  border-color: color-mix(in srgb, var(--default-color), transparent 70%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 60%);
   border-radius: 5px;
   box-shadow: none;
   font-size: var(--font-size-md);
@@ -1507,7 +1526,7 @@ section,
 .contact .php-email-form input::placeholder,
 .contact .php-email-form textarea::placeholder,
 .contact .php-email-form select::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
 }
 
 .contact .php-email-form input,
