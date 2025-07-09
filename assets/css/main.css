@@ -613,7 +613,7 @@ h6 {
   }
 
   .navmenu ul li {
-    margin-top: 15px;
+    margin-top: 0.6rem;
     padding: 5px;
   }
 
@@ -622,7 +622,7 @@ h6 {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: var(--font-size-md);
+    font-size: 1.27rem;
     /* 18px */
     font-weight: 500;
     display: flex;
