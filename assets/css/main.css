@@ -287,8 +287,7 @@ h6 {
   background-color: var(--accent-color);
   height: 40px;
   padding: 0;
-  font-size: var(--font-size-sm);
-  /* 18px */
+  font-size: var(--font-size-base);
   transition: all 0.5s;
 }
 
