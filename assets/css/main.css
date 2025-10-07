@@ -902,11 +902,12 @@ h6 {
 }
 
 .scroll-top i {
-  font-size: var(--font-size-xl);
-  /* 20px */
+  /* Sugestão de ajuste: use um tamanho menor (LG ou base) */
+  font-size: var(--font-size-lg);
   color: var(--contrast-color);
   line-height: 0;
-  font-weight: 700;
+  /* Remova esta linha ou mude para 400/500 */
+  font-weight: 500; 
 }
 
 .scroll-top:hover {
