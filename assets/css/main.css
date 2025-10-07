@@ -902,12 +902,16 @@ h6 {
 }
 
 .scroll-top i {
-  /* Sugestão de ajuste: use um tamanho menor (LG ou base) */
-  font-size: var(--font-size-lg);
+  /* 1. FORÇAR O USO DA FONTE DE ÍCONES */
+  font-family: "bootstrap-icons" !important;
+
+  /* 2. FORÇAR O PESO DA FONTE CORRETO (ícones normalmente são 400) */
+  font-weight: 400 !important;
+
+  /* 3. Mantenha os seus estilos de tamanho e cor */
+  font-size: var(--font-size-lg); 
   color: var(--contrast-color);
   line-height: 0;
-  /* Remova esta linha ou mude para 400/500 */
-  font-weight: 500; 
 }
 
 .scroll-top:hover {
