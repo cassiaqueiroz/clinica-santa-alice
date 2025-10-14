@@ -1724,17 +1724,3 @@ section,
   max-width: 100vw;
   overflow: hidden;
 }
-
-/* Fix específico para flatpickr arrows */
-.flatpickr-next-month,
-.flatpickr-prev-month {
-  max-width: 30px !important;
-  max-height: 30px !important;
-  overflow: hidden !important;
-}
-
-.flatpickr-next-month svg,
-.flatpickr-prev-month svg {
-  max-width: 20px !important;
-  max-height: 20px !important;
-}
