@@ -25,6 +25,9 @@
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <!-- Main CSS File -->
     <link href="./assets/css/main.min.css" rel="stylesheet">
@@ -457,8 +460,8 @@
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
                 <label class="mb-1" for="date">Data e Hora</label>
-                <input type="datetime-local" name="date" class="form-control" id="date" placeholder="dd/mm/aaaa HH:mm"
-                  pattern=" \d{2}/\d{2}/\d{4}" required autocomplete="off" aria-label="Data da visita">
+                <input type="text" name="date" class="form-control" id="date" placeholder="dd/mm/aaaa HH:mm"
+                  required autocomplete="off" aria-label="Data da visita">
               </div>
             </div>
 
@@ -679,7 +682,7 @@
     <script src="assets/js/form.js" defer></script>
 
     <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script type="text/javascript">
       document.addEventListener('DOMContentLoaded', function () {
