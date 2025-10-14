@@ -88,6 +88,7 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
   font-size: var(--font-size-base);
+  overflow-x: hidden;
 }
 
 a {
@@ -206,7 +207,7 @@ h6 {
 
 .pulsating-play-btn:hover:after {
   border-left: 15px solid var(--accent-color);
-  transform: scale(20);
+  transform: scale(1.1);
 }
 
 @keyframes pulsate-play-btn {
@@ -902,11 +903,16 @@ h6 {
 }
 
 .scroll-top i {
-  font-size: var(--font-size-xl);
-  /* 20px */
+  /* 1. FORÇAR O USO DA FONTE DE ÍCONES */
+  font-family: "bootstrap-icons" !important;
+
+  /* 2. FORÇAR O PESO DA FONTE CORRETO (ícones normalmente são 400) */
+  font-weight: 400 !important;
+
+  /* 3. Mantenha os seus estilos de tamanho e cor */
+  font-size: var(--font-size-lg); 
   color: var(--contrast-color);
   line-height: 0;
-  font-weight: 700;
 }
 
 .scroll-top:hover {
@@ -1706,4 +1712,29 @@ section,
   margin-right: 8px;
   position: relative;
   bottom: -1px;
+}
+
+/* Fix para prevenir elementos que saem da tela */
+* {
+  max-width: 100vw;
+}
+
+*::before,
+*::after {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* Fix específico para flatpickr arrows */
+.flatpickr-next-month,
+.flatpickr-prev-month {
+  max-width: 30px !important;
+  max-height: 30px !important;
+  overflow: hidden !important;
+}
+
+.flatpickr-next-month svg,
+.flatpickr-prev-month svg {
+  max-width: 20px !important;
+  max-height: 20px !important;
 }
