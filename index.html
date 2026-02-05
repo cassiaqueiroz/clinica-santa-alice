@@ -246,15 +246,37 @@
 
             <div class="col-lg-6 position-relative d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
               <div class="video-container w-100">
+                <!-- Onda decorativa moderna acima do vídeo (desktop) -->
+                <div class="video-decor video-decor-top d-none d-lg-block">
+                  <svg class="wave-svg wave-top" width="100%" height="80" viewBox="0 0 500 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="waveGradTop" x1="0" y1="0" x2="500" y2="80" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#b2e9d6" stop-opacity="0.7"/>
+                        <stop offset="1" stop-color="#3c7d7a" stop-opacity="0.3"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,40 Q125,0 250,40 T500,40 V80 H0 Z" fill="url(#waveGradTop)"/>
+                  </svg>
+                </div>
                 <video src="assets/video/santa-alice.mp4" class="img-fluid" controls>
                   <track src="assets/video/santa-alice-pt.vtt" kind="subtitles" srclang="pt" label="Português">
-                  <track src="assets/video/santa-alice-desc.vtt" kind="descriptions" srclang="pt"
-                    label="Descrição em Português">
+                  <track src="assets/video/santa-alice-desc.vtt" kind="descriptions" srclang="pt" label="Descrição em Português">
                   <track src="assets/video/santa-alice-pt.vtt" kind="subtitles" srclang="pt" label="Português">
-                  <track src="assets/video/santa-alice-desc.vtt" kind="descriptions" srclang="pt"
-                    label="Descrição em Português">
+                  <track src="assets/video/santa-alice-desc.vtt" kind="descriptions" srclang="pt" label="Descrição em Português">
                   Seu navegador não suporta este arquivo de vídeo.
                 </video>
+                <!-- Onda decorativa moderna abaixo do vídeo (desktop) -->
+                <div class="video-decor video-decor-bottom d-none d-lg-block">
+                  <svg class="wave-svg wave-bottom" width="100%" height="80" viewBox="0 0 500 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <linearGradient id="waveGradBottom" x1="0" y1="80" x2="500" y2="0" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#b2e9d6" stop-opacity="0.7"/>
+                        <stop offset="1" stop-color="#3c7d7a" stop-opacity="0.3"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,40 Q125,80 250,40 T500,40 V0 H0 Z" fill="url(#waveGradBottom)"/>
+                  </svg>
+                </div>
               </div>
             </div>
 
