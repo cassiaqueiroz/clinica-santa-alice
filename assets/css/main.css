@@ -1,9 +1,11 @@
-/* --- Decoração geométrica para vídeo (desktop) --- */
+/* --- Decoração geométrica para vídeo (Adaptada para todos os dispositivos) --- */
 .video-container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Adicionamos um respiro para as ondas não cortarem em telas pequenas */
+  padding: 40px 0; 
 }
 
 /* Decoração moderna com ondas animadas */
@@ -14,39 +16,55 @@
   z-index: 2;
   pointer-events: none;
   width: 100%;
-  max-width: 520px;
+  /* No mobile, deixamos o max-width acompanhar o vídeo */
+  max-width: 520px; 
 }
+
+/* Ajuste de posição para Mobile (ondas menores e mais próximas) */
 .video-decor-top {
-  top: -60px;
+  top: -20px;
 }
 .video-decor-bottom {
-  bottom: -60px;
+  bottom: -20px;
 }
+
 .wave-svg {
   width: 100%;
-  height: 80px;
+  height: 40px; /* Altura reduzida para telas pequenas */
   opacity: 0.95;
   filter: blur(0.5px) saturate(1.1);
   will-change: transform;
+  transition: height 0.3s ease;
 }
+
+/* --- Media Query para Desktop --- */
+@media (min-width: 992px) {
+  .video-container {
+    padding: 60px 0;
+  }
+  .wave-svg {
+    height: 80px; /* Altura original no desktop */
+  }
+  .video-decor-top {
+    top: -60px;
+  }
+  .video-decor-bottom {
+    bottom: -60px;
+  }
+}
+
+/* --- Removidos os display: none que escondiam o efeito --- */
+
 @keyframes waveMove {
-  0% { transform: translateX(-50%) scaleX(1) scaleY(1); }
-  50% { transform: translateX(-50%) scaleX(1.04) scaleY(1.03); }
-  100% { transform: translateX(-50%) scaleX(1) scaleY(1); }
+  0% { transform: translateX(-0%) scaleX(1) scaleY(1); }
+  50% { transform: translateX(-0%) scaleX(1.04) scaleY(1.03); }
+  100% { transform: translateX(-0%) scaleX(1) scaleY(1); }
 }
+
+/* Aplicando a animação */
 .video-decor-top .wave-svg,
 .video-decor-bottom .wave-svg {
   animation: waveMove 6s ease-in-out infinite;
-}
-@media (max-width: 1399.98px) {
-  .video-decor {
-    display: none !important;
-  }
-}
-@media (max-width: 991.98px) {
-  .video-decor {
-    display: none !important;
-  }
 }
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -1202,7 +1220,6 @@ section,
   display: block;
   z-index: 1;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 
 .about .content {
